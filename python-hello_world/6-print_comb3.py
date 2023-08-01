@@ -6,4 +6,4 @@ for i in range(9):
                 if i < 8 and j <= 9:
                     print(", ", end="")
                 else:
-                     print("\n")
+                     print("\n", end="")
