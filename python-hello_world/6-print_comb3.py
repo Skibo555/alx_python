@@ -2,7 +2,7 @@
 for i in range(9):
     print("{:d}".format(i), end="")
     for j in range(1, 10):
-        if i < j:
-            print("{:d}, ".format(j), end="")
+        while i < j:
+            print("{:d}{:d}, ".format(i,j), end="")
         else:
             print("{:d}{:d}".format(i,j))
