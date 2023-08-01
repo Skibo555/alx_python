@@ -5,5 +5,3 @@ for i in range(9):
         print("{:d}{:d}".format(j) end="")
         if i < j:
             print("{:d}, {:d}".format(i,j), end=", ")
-        else:
-            print("{:d}, {:d}".format(i,j))
