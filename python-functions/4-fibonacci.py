@@ -13,6 +13,6 @@ def fibonacci_sequence(n):
             print(n_1)
             fib = n_1 + n_2
             n_1 = n_2
-            n_2 = fib
             count += 1
-            return list(count)        
+            return list(fib)
+        
