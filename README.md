@@ -7,7 +7,26 @@
 
 - 🌱 I’m currently learning **Python Functions**
 <h2 align="left">Project Objectives</h2>
-<p align="left">In this project, Functions in Python.</p>
+<p align="left">In this project, Functions in Python. At the end of this project, you are expected to be able to explain to anyone, without the help of Google:<br>
+- Write a function that adds two integers and returns the result.
+- Write a function that computes a to the power of b and return the value.
+- Write a Python function called convert_to_celsius that takes a temperature in Fahrenheit as input and returns the temperature in Celsius.
+- Write a Python function called reverse_string that takes a string as input and returns the reverse of that string.
+- Write a Python function called fibonacci_sequence that takes a number n as input and returns a list of the first n Fibonacci numbers.
+- Write a Python function called is_prime that takes a number as input and returns True if the number is prime, and False otherwise.
+- Write a Python function called validate_password that takes a password as input and performs the following checks:
+
+<ul>
+<li>The password should be at least 8 characters long.</li>
+<li>The password should contain at least one uppercase letter, one lowercase letter, and one digit.</li>
+<li>The password should not contain spaces.</li>
+<li>Prototype: def validate_password(password)</li>
+
+<li>Returns True if the password passes all the checks, and False otherwise.</li>
+
+<li>You are not allowed to import any module.</li>
+</ul>
+</p>
 
 <h2 align="left">Project Requirements</h2>
 
