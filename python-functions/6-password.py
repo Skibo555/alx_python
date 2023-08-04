@@ -4,6 +4,6 @@ def validate_password(password):
         if any(char.issupper() for char in password):
             if any(char.islower() for char in password):
                 if any(char.isspace() for char in password):
-        return True
+                    return True
     else:
         return False
