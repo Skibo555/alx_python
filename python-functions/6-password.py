@@ -1,9 +1,7 @@
 #!/usr/bin/python
 def validate_password(password):
-    if len(password) > 7:
-        if any(char.isupper() for char in password):
-            if any(char.islower() for char in password):
-                if any(char.isspace() for char in password):
-                    return True
-    else:
-        return False
+    for i in password:
+        if i.isupper() and i.isspace and i.islower and i > 7:
+            return True
+        else:
+            return False
