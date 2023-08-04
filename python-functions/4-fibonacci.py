@@ -1,18 +1,12 @@
 #!/usr/bin/python
 def fibonacci_sequence(n):
-
-    n_1, n_2 = 0, 1
-    count = 0
-
-    if n < 0:
-        return n
+    if n <= 0:
+        return []
     elif n == 1:
-        return n_1
+        return [0]
+    elif n == 2:
+        return [0, 1]
     else:
-        while count < 0:
-            print(n_1)
-            fib = n_1 + n_2
-            n_1 = n_2
-            count += 1
-            return list(fib)
-        
+        fib_sequence = fibonacci_sequence(n - 1)
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+        return fib_sequence
