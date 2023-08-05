@@ -9,9 +9,8 @@ def validate_password(password):
         return False
     if not re.search(r'\d', password):
         return False
-    if not re.search(r' ', password):
+    if ' ' in password:
         return False
     if len(password) < 8:
         return False
-        return
     return True
