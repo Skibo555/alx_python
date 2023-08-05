@@ -3,7 +3,7 @@
 import re
 
 def validate_password(password):
-    if not re.search(r'[A-z]', password):
+    if not re.search(r'[A-Z]', password):
         return False
     if not re.search(r'[a-z]', password):
         return False
