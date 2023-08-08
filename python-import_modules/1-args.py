@@ -2,7 +2,7 @@
 if __name__ == "__main__":
     import sys
 
-    argument_lenth = len(sys.argv)
+    argument_lenth = len(sys.argv) - 1
     print("{:d} argument:".format(argument_lenth))
     argument_lenth = len(sys.argv) - 1
     print("{:d}: {}".format(argument_lenth, sys.argv))
