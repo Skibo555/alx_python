@@ -4,6 +4,5 @@ if __name__ == "__main__":
 
     argument_lenth = len(sys.argv) - 1
     print("{:d} argument:".format(argument_lenth))
-    for arg in sys.argv[1:]:
-        for i in range(1, len(sys.argv)):
-            print("{}: {}".format(i, arg))
+    for i in range(1, len(sys.argv)):
+        print("{}: {}".format(i, arg))
