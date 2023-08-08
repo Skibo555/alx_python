@@ -6,7 +6,7 @@ argument_length = len(sys.argv) - 1
 
 if argument_length == 1:
     print("{:d} argument:".format(argument_length))
-    print("{:d}: argument.".format(argument_length))
+    #print("{:d}: argument.".format(argument_length))
 if argument_length == 0:
     print("{:d} argument:".format(argument_length))
 else:
