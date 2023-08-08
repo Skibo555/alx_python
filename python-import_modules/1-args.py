@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    argument_lenth = len(sys.argv[0])
+    argument_lenth = len(sys.argv) - 1
     if argument_lenth > 0:
         print("{:d} argument:".format(argument_lenth))
     else:
