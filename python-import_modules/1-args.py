@@ -2,10 +2,11 @@
 if __name__ == "__main__":
     import sys
 
-    argument_lenth = len(sys.argv) - 1
-    if argument_lenth < 1:
-        print("{:d} argument.".format(argument_lenth))
-    print("{:d} argument:".format(argument_lenth))
-    for i in range(1, len(sys.argv)):
-        for arg in sys.argv[1:]:
-            print("{}: {}".format(i, arg))
+argument_length = len(sys.argv) - 1
+
+if argument_length < 1:
+    print("{:d} argument.".format(argument_length))
+else:
+    print("{:d} arguments:".format(argument_length))
+    for i, arg in enumerate(sys.argv[1:], start=1):
+        print("{}: {}".format(i, arg))
