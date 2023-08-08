@@ -6,6 +6,6 @@ if __name__ == "__main__":
     print("{:d} argument:".format(argument_lenth))
     argument_lenth = len(sys.argv)
     for arg in sys.argv:
-        print("{:d}: {}".format(argument_lenth, sys.argv))
+        print("{:d}: {}".format(argument_lenth, arg))
     if argument_lenth > 0:
         print(".")
