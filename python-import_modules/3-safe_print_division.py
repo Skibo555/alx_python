@@ -8,4 +8,3 @@ def safe_print_division(a, b):
     finally:
         if 'i' in locals():
             print("Inside result: {}".format(i))
-    return i
