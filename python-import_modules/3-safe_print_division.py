@@ -6,5 +6,4 @@ def safe_print_division(a, b):
     except ZeroDivisionError as e:
         print("Inside result: {}".format(e))
     finally:
-        if 'i' in locals():
-            print("Inside result: {}".format(i))
+        return(1)
