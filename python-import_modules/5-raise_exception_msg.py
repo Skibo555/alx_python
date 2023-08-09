@@ -7,4 +7,4 @@ class CustomError(Exception):
 def raise_exception_msg(message=""):
     if message is not str:
         raise NameError
-    return message
+    print(message)
