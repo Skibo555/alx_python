@@ -7,6 +7,7 @@ def safe_print_division(a, b):
         print("Inside result: {}".format(e))
     except NameError as k:
         print("Inside result: {}".format(k))
+        return(k)
     finally:
         print("Inside result: {}".format(i))
         return(i)
