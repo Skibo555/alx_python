@@ -5,6 +5,6 @@ class CustomError(Exception):
         super().__init__(self.message)
 
 def raise_exception_msg(message=""):
-    if message is not str:
+    if message == str:
         raise NameError
-    print(message)
+        print(message)
