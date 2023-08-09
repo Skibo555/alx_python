@@ -6,7 +6,8 @@ def safe_print_division(a, b):
     except ZeroDivisionError as e:
         print("Inside result: {}".format(e))
     except NameError as k:
-        return(k)
+        return k
     finally:
-        print("Inside result: {}".format(i))
-        return(i)
+        if 'i' in locals():
+            print("Inside result: {}".format(i))
+    return i
