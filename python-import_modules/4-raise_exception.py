@@ -6,4 +6,5 @@ class CustomError(Exception):
 
 def raise_exception():
     if 10 % 2 == 0:
-        raise CustomError("You got it.")
+        raise CustomError("Exception has been raised")
+    return CustomError
