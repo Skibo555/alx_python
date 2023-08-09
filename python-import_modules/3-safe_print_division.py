@@ -4,6 +4,6 @@ def safe_print_division(a, b):
     try:
         sum = a / b
     except ZeroDivisionError:
-        print(sum)
+        return (sum)
     finally:
-        print("Inside result: {}".format(sum))
+        return ("Inside result: {}".format(sum))
