@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def no_c(my_string):
-    if ('[c]', '[C]', '[o]', '[O]') in my_string:
-        del 'c', 'C', 'O', 'o'
-        my_tuple = my_string
-        return my_tuple
+    for i in my_string:
+        if my_string[i] != ('[o]', '[O]', '[C]', '[c]'):
+            my_tuple = my_string
+            return my_tuple
