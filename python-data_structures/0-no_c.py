@@ -3,8 +3,6 @@
 def no_c(my_string):
     filtered_string = ""
     for char in my_string:
-        if char not in ['[o]', '[O]', '[C]', '[c]']:
-            filtered_string = my_string
-        elif  char not in ['[C]', '[c]']:
+        if char ['[o]', '[O]',] or ['[C]', '[c]'] not in my_string:
             filtered_string = my_string
         return filtered_string
