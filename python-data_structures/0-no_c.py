@@ -6,4 +6,5 @@ def no_c(my_string):
         if char not in ['[o]', '[O]', '[C]', '[c]']:
             filtered_string += char
         elif  char not in ['[C]', '[c]']:
-            return filtered_string
+            filtered_string += char
+        return filtered_string
