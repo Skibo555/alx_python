@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 def no_c(my_string):
-    for i in my_string:
-        if my_string[i] != ('[o]', '[O]', '[C]', '[c]'):
-            my_tuple = my_string
-            return my_tuple
+    filtered_string = ""
+    for char in my_string:
+        if char not in ['[o]', '[O]', '[C]', '[c]']:
+            filtered_string += char
+    return filtered_string
