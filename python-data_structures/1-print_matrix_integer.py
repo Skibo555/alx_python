@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 def print_matrix_integer(matrix=[[]]):
-    for i in range(len(matrix)):  # Iterate over the indices of rows in the matrix
-        matrix[i] = list(range(1, 4))  # Replace each row with [1, 2, 3]
-        print("{:d}",str.format(matrix[i]).join(map(str, matrix[i])))  # Print the modified row
+    for row in matrix:
+        for num in row:
+            print("{num:3}".format(row) end=" ")  # Adjust the formatting as needed
+        print()  # Move to the next line after each row
