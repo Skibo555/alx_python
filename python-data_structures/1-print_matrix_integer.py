@@ -1,7 +1,12 @@
 #!/usr/bin/python3
 
 def print_matrix_integer(matrix=[[]]):
-    for row in range(1, 3[matrix]):
-        for matrix in row:
-            print("{:d}".format(matrix))  # Adjust the formatting as needed
-        print()  # Move to the next line after each row
+    matrix = [[1] + 1 for i in range(10)]
+    for i in range(10):
+        for j in range(10):
+            matrix[i][j] = "{} {}".format(i, j)
+
+    for i in range(10):
+        for j in range(10):
+            print(matrix[i][j], end='')
+        print()
