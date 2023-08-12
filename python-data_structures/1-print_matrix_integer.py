@@ -8,5 +8,5 @@ def print_matrix_integer(matrix=[[]]):
         matrix.append(sublist)
     
         for row in matrix:
-            print(matrix[][".format(", "{:d}"])
+            return (matrix[".format(", "{:d}"])
    
