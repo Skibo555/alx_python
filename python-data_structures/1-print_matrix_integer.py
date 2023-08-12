@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 
-def print_matrix_integer(matrix=[[]]):
-   if matrix is None:
+def print_matrix_integer(matrix=None):
+    if matrix is None:
         matrix = []
         for i in range(0, 9, 3):
             sublist = [j for j in range(i + 1, i + 4)]
-        matrix.append(sublist)
+            matrix.append(sublist)
     
         for row in matrix:
-            return (sublist[".format(", "{:d}"])
-   
+            print("{}".format(", ".join("{:d}".format(num) for num in row)))
