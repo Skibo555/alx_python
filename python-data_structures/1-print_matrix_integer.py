@@ -5,4 +5,4 @@ def print_matrix_integer(matrix=[[]]):
         for j in matrix:
             matrix[:].append(j)
             return matrix
-        print("{:d}".format(matrix), end="")
+        print("{:d}".format(matrix[i[j]]), end="")
