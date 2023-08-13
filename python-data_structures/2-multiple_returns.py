@@ -3,6 +3,6 @@
 def multiple_returns(sentence):
     i = len(sentence)
     j = sentence[0]
-    if j == "":
+    if sentence[0] == "":
         return None
     return i, j
