@@ -2,4 +2,4 @@
 
 def update_dictionary(a_dictionary, key, value):
     a_dictionary[key] = value
-    return key, value
+    return list(map(key, value), a_dictionary)
