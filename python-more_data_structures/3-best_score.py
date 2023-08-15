@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 
 def best_score(a_dictionary):
-        biggest_key = ord(a_dictionary)
-        if a_dictionary == " ":
-              return a_dictionary
-        elif a_dictionary == "":
-              return a_dictionary
-        else:
-            return biggest_key
+    largest_value = None
+    for value in a_dictionary.values():
+        if isinstance(value, int):
+            if largest_value is None:
+                return None
+            elif value > largest_value:
+                largest_value = value
+            return largest_value
