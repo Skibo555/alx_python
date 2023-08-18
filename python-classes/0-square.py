@@ -1,20 +1,22 @@
 class Square:
     """
-    This class represents a square shape.
+    A class representing a square.
 
     Attributes:
-    - size (int): The length of each side of the square.
+    - __size (int): The size of the square's sides.
 
     Methods:
-    - __init__(self, __size): Constructs a Square instance with a given side length.
-    - perimeter(self): Calculates and returns the perimeter of the square.
+    - __init__(self, size): Initializes a Square instance with the given size.
+
+    Example usage:
+    >>> square = Square(5)
     """
 
-    def __init__(self, __size):
+    def __init__(self, size):
         """
-         Initializes a Square instance with the given size.
+        Initializes a Square instance with the given size.
 
-         Args:
-         - __size (int): The length of each side of the square.
-         """
-        self.__size = __size
+        Args:
+        - size (int): The size of the square's sides.
+        """
+        self.__size = size
