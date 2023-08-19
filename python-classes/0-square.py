@@ -1,3 +1,10 @@
+"""
+Square Module
+
+This is a function that calculates squares using size as a parameter.
+"""
+
+
 class Square:
     """
     A class representing a square.
