@@ -7,7 +7,7 @@ class MetaClass(type):
     """
     documentation
     """
-    def dir(cls):
+    def __dir__(cls):
         return [attribute for attribute in super().__dir__() if attribute != 'init_subclass']
 
 
@@ -16,5 +16,5 @@ class BaseGeometry(metaclass=MetaClass):
     documentation for class goes here
     """
 
-    def dir(cls):
+    def __dir__(cls):
         return [attribute for attribute in super().__dir__() if attribute != 'init_subclass']
