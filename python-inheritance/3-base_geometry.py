@@ -21,4 +21,4 @@ class BaseGeometry:
         attributes = dir(self)
         magic_attributes = [attr for attr in attributes if attr.startswith('__') and attr.endswith('__')]
         for attr in magic_attributes:
-            print(attr)
+            return(attr)
