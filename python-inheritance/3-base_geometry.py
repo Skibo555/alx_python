@@ -18,4 +18,4 @@ class BaseGeometry:
         pass
 
 empty = BaseGeometry()
-print(empty)
+print(dir(empty))
