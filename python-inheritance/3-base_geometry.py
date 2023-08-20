@@ -15,3 +15,9 @@ class BaseGeometry:
         It does not return anything for now but it will in future.
     """
     pass
+
+    class BaseGeometry:
+
+    magic_attributes = [attr for attr in dir(BaseGeometry) if attr.startswith('__')]
+    print( magic_attributes)
+
