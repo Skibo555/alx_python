@@ -15,4 +15,3 @@ class BaseGeometry:
         It does not return anything for now but it will in future.
     """
     pass
-    return dir(BaseGeometry)
