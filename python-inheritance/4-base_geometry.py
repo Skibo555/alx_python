@@ -26,4 +26,4 @@ class BaseGeometry(metaclass=MetaClass):
         Raises:
             Exception: Always raises an exception.
         """
-        raise ("area() is not implemented")
+        raise Exception("area() is not implemented")
