@@ -14,13 +14,8 @@ class BaseGeometry:
     Return:
         It does not return anything for now but it will in future.
     """
-    pass
-empty_instance = BaseGeometry()
+    def __init__(self):
+        pass
 
-# Get the list of attributes using dir()
-attributes = dir(empty_instance)
-
-# Filter out magic attributes
-magic_attributes = [attr for attr in attributes if attr.startswith('__') and attr.endswith('__')]
-
-print(magic_attributes)
+empty = BaseGeometry()
+print(empty)
