@@ -15,3 +15,8 @@ class BaseGeometry:
         It does not return anything for now but it will in future.
     """
     pass
+bg = BaseGeometry()
+
+print(bg)
+print(dir(bg))
+print(dir(BaseGeometry))
