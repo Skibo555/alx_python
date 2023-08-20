@@ -15,7 +15,7 @@ class BaseGeometry:
         It does not return anything for now but it will in future.
     """
     pass
-empty_instance = EmptyClass()
+empty_instance = BaseGeometry()
 
 # Get the list of attributes using dir()
 attributes = dir(empty_instance)
