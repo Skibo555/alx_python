@@ -1,17 +1,11 @@
 """
-BaseGeometry Module
-
-This module prints the names of the magic attributes.
+Your module documentation goes here
 """
-class MetaClass(type):
-    "
-    This is a documentation for an obj.
 
-    Agrs:
-        cls: this is the only arguement it takes.
-    
-    Return:
-        It returns a value in a variable.
+
+class MetaClass(type):
+    """
+    documentation
     """
     def dir(cls):
         return [attribute for attribute in super().dir() if attribute != 'init_subclass']
@@ -19,13 +13,8 @@ class MetaClass(type):
 
 class BaseGeometry(metaclass=MetaClass):
     """
-    This is a class inside of a class.
-
-    Args:
-        metaclass: The only argument.
-
-    Return: attribute
+    documentation for class goes here
     """
 
     def dir(cls):
-        return [attribute for attribute in super().dir() if attribute != 'init_subclass'])
+        return [attribute for attribute in super().dir() if attribute != 'init_subclass']
