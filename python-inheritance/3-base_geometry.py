@@ -1,10 +1,11 @@
 """
-A module that have an empty class with override
+Your module documentation goes here
 """
+
 
 class MetaClass(type):
     """
-    Override dir() method to exclude __init__subclass__
+    documentation
     """
     def dir(cls):
         return [attribute for attribute in super().__dir()__ if attribute != 'init_subclass']
@@ -12,7 +13,7 @@ class MetaClass(type):
 
 class BaseGeometry(metaclass=MetaClass):
     """
-    BaseGeometry class that uses the overriden dir() method.
+    documentation for class goes here
     """
 
     def dir(cls):
