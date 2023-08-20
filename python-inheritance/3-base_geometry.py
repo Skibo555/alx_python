@@ -17,8 +17,5 @@ class BaseGeometry:
     def __init__(self):
         pass
 
-    def print_magic_attributes(self):
-        attributes = dir(self)
-        magic_attributes = [attr for attr in attributes if attr.startswith('__') and attr.endswith('__')]
-        for attr in magic_attributes:
-            return(attr)
+myobj = BaseGeometry()
+print(dir(myobj))
