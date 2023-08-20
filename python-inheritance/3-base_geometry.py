@@ -1,11 +1,7 @@
 """
 BaseGeometry Module
 
-This module prints the names of the magic attributes
-
-Usage:
-    - checks the attributes if currect. 
-
+This module prints the names of the magic attributes.
 """
 class MetaClass(type):
     "
