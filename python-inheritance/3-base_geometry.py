@@ -1,5 +1,5 @@
 """
-MetaClass Module
+BaseGeometry Module
 
 This module prints the names of the magic attributes
 
