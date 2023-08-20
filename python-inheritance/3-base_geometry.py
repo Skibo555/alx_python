@@ -18,4 +18,4 @@ class BaseGeometry:
         pass
 
 myobj = BaseGeometry()
-print(dir(myobj))
+print(myobj)
