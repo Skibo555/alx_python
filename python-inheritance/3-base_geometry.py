@@ -16,8 +16,6 @@ class BaseGeometry:
     """
     pass
 
-    class BaseGeometry:
-
     magic_attributes = [attr for attr in dir(BaseGeometry) if attr.startswith('__')]
     print( magic_attributes)
 
