@@ -18,3 +18,5 @@ class BaseGeometry:
         pass
 
 empty = BaseGeometry()
+
+attributes = dir(empty)
