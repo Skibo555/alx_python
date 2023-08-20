@@ -3,7 +3,7 @@ Square Module
 
 This is a function that calculates squares using size as a parameter.
 """
-def is_kind_of_class(obj, a_class):
+def inherits_from(obj, a_class):
     """
     This is a docstring for is_same_class.
 
