@@ -15,3 +15,6 @@ class BaseGeometry:
         It does not return anything for now but it will in future.
     """
     pass
+
+    def __str__(self):
+        return self
