@@ -15,8 +15,12 @@ class BaseGeometry:
         It does not return anything for now but it will in future.
     """
     pass
-bg = BaseGeometry()
+empty_instance = EmptyClass()
 
-print(bg)
-print(dir(bg))
-print(dir(BaseGeometry))
+# Get the list of attributes using dir()
+attributes = dir(empty_instance)
+
+# Filter out magic attributes
+magic_attributes = [attr for attr in attributes if attr.startswith('__') and attr.endswith('__')]
+
+print(magic_attributes)
