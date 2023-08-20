@@ -3,6 +3,9 @@ MetaClass Module
 
 This module prints the names of the magic attributes
 
+Usage:
+    - checks the attributes if currect. 
+
 """
 class MetaClass(type):
     "
