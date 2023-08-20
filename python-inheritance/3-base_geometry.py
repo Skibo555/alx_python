@@ -1,21 +1,30 @@
 """
-BaseGeometry
+This module prints the names of the magic attributes"""
 
-This is a empty class
-"""
 
-class BaseGeometry:
+class MetaClass(type):
     """
-    This is an empty class of Geometry.
+    This is a documentation for an obj.
+
+    Agrs:
+        cls: this is the only arguement it takes.
+    
+    Return:
+        It returns a value in a variable.
+    """
+    def dir(cls):
+        return [attribute for attribute in super().dir() if attribute != 'init_subclass']
+
+
+class BaseGeometry(metaclass=MetaClass):
+    """
+    This is a class inside of a class.
 
     Args:
-       It does not take any arguments!
+        metaclass: The only argument.
 
-    Return:
-        It does not return anything for now but it will in future.
+    Return: attribute
     """
-    def __init__(self):
-        pass
 
-myobj = BaseGeometry()
-print(myobj)
+    def dir(cls):
+        return [attribute for attribute in super().dir() if attribute != 'init_subclass'])
