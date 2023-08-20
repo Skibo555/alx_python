@@ -1,9 +1,10 @@
 """
-This module prints the names of the magic attributes"""
+Geometry Module
 
+This module prints the names of the magic attributes
 
+"""
 class MetaClass(type):
-    """
     This is a documentation for an obj.
 
     Agrs:
