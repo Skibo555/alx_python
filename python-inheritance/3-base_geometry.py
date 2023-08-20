@@ -1,5 +1,5 @@
 """
-A module that have an empty class with override to dir() method
+A module that have an empty class with override
 """
 
 class MetaClass(type):
