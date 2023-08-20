@@ -16,5 +16,4 @@ class BaseGeometry:
     """
     pass
 
-    def __repr__ (self):
-        return self
+b = BaseGeometry()
