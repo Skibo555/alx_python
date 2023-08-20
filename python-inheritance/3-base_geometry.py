@@ -7,7 +7,7 @@ class MetaClass(type):
     Override dir() method to exclude __init__subclass__
     """
     def dir(cls):
-        return [attribute for attribute in super().dir() if attribute != 'init_subclass']
+        return [attribute for attribute in super().__dir()__ if attribute != 'init_subclass']
 
 
 class BaseGeometry(metaclass=MetaClass):
@@ -16,4 +16,4 @@ class BaseGeometry(metaclass=MetaClass):
     """
 
     def dir(cls):
-        return [attribute for attribute in super().dir() if attribute != 'init_subclass']
+        return [attribute for attribute in super().__dir()__ if attribute != 'init_subclass']
