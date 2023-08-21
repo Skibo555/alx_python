@@ -47,6 +47,9 @@ class BaseGeometry(metaclass=MetaClass):
 
 
 class Rectangle(BaseGeometry):
+     """
+    This is a class that inherits from it's parents
+    """
     def __init__(self, width, height):
         super().__init__("Rectangle")
         self.__width = width
