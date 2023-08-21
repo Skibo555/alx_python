@@ -1,11 +1,10 @@
 """
-Your module documentation goes here
+A module that have an empty class with override to dir() method
 """
-
 
 class MetaClass(type):
     """
-    documentation
+    Override dir() method to execlude __init__subclass__
     """
     def __dir__(cls):
         return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
@@ -13,45 +12,42 @@ class MetaClass(type):
 
 class BaseGeometry(metaclass=MetaClass):
     """
-    documentation for class goes here
+    BaseGeometry class that uses the overriden dir() method 
     """
-
+    
     def __dir__(cls):
         return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
-
+    
     def area(self):
         """
-        Calculates the area and raises an exception.
-
-        Raises:
-            Exception: Always raises an exception.
+        A public method that raise an exception
         """
-        raise Exception("area() is not implemented")
-
+        raise Exception ("area() is not implemented")
     def integer_validator(self, name, value):
         """
-        Validate an integer value.
-
-        Args:
-            name (str): The name of the value being validated.
-            value (int): The value to be validated.
-
-        Raises:
-            TypeError: If the value is not an integer.
-            ValueError: If the value is less than or equal to 0.
+        A public method that validates value:
+        - If value is not an integer: raise a TypeError exception, 
+          with the message <name> must be an integer
+        - If value is less or equal to 0: raise a ValueError exception with the 
+         message <name> must be greater than 0
         """
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
+        elif value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
+        
+BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
+        
 class Rectangle(BaseGeometry):
-     """
-     Documentation
-     """
+    """
+    A class that inherits from BaseGeometry
+    """
     def __init__(self, width, height):
         """
-        Instantiation
+        Instantiate with width and height
         """
-        super()self.__width = width
+        self.__width = width
         self.__height = height
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
