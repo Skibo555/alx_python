@@ -1,12 +1,5 @@
 """
-Module: Rectangle Geometry
-
-This module defines the BaseGeometry class for basic geometry validation
-and the Rectangle class that inherits from BaseGeometry for rectangles.
-
-Classes:
-- BaseGeometry: Provides methods for integer validation.
-- Rectangle: Represents a rectangle with width and height attributes.
+A module that have an empty class with override to dir() method
 """
 
 class MetaClass(type):
@@ -43,7 +36,7 @@ class BaseGeometry(metaclass=MetaClass):
         elif value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
         
-BaseGeometry = __import__('5-base_geometry').BaseGeometry
+BaseGeometry = __import__('6-base_geometry').BaseGeometry
 
         
 class Rectangle(BaseGeometry):
