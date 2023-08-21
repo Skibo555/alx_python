@@ -50,7 +50,14 @@ Your module documentation goes here.
 
 class Rectangle(BaseGeometry):
      """
-    This is a class that inherits from it's parents
+    A subclass that represent a Rectangle inheriting from BaseGeometry.
+
+    Attribute:
+        width (int): An integer value.
+        height (int): An integer value.
+
+    Methods:
+        It takes no method for now.
     """
     def __init__(self, width, height):
         super().__init__("Rectangle")
