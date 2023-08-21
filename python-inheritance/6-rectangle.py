@@ -53,9 +53,6 @@ class Rectangle(BaseGeometry):
      Documentation
      """
     def __init__(self, width, height):
-        """
-        documentation for class goes here
-        """
         super().__init__("Rectangle")
         self.__width = width
         self.__height = height
