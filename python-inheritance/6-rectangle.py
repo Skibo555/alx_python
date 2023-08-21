@@ -1,5 +1,12 @@
 """
-Your module documentation goes here
+Geometry Module
+
+This module is used to calculate Geometry.
+
+Example:
+    >>> import module_name
+    >>> instance = Rectangle.BaseGeomerty()
+    >>> instance.method()
 """
 
 
@@ -45,7 +52,14 @@ class BaseGeometry(metaclass=MetaClass):
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 """
-Documentation
+Geometry Module
+
+This module is used to calculate Geometry.
+
+Example:
+    >>> import module_name
+    >>> instance = Rectangle.BaseGeomerty()
+    >>> instance.method()
 """
 class Rectangle(BaseGeometry):
     
