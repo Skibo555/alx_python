@@ -45,7 +45,7 @@ class BaseGeometry(metaclass=MetaClass):
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 """
-Documented my class now?
+Your module documentation goes here.
 """
 
 class Rectangle(BaseGeometry):
