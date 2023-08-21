@@ -45,19 +45,19 @@ class BaseGeometry(metaclass=MetaClass):
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 """
-Your module documentation goes here.
+A subclass that represent a Rectangle inheriting from BaseGeometry.
+
+Attribute:
+    width (int): An integer value.
+    height (int): An integer value.
+
+Methods:
+    It takes no method for now.
 """
 
 class Rectangle(BaseGeometry):
      """
     A subclass that represent a Rectangle inheriting from BaseGeometry.
-
-    Attribute:
-        width (int): An integer value.
-        height (int): An integer value.
-
-    Methods:
-        It takes no method for now.
     """
     def __init__(self, width, height):
         super().__init__("Rectangle")
