@@ -1,5 +1,12 @@
 """
-A module that have an empty class with override to dir() method
+Module: Rectangle Geometry
+
+This module defines the BaseGeometry class for basic geometry validation
+and the Rectangle class that inherits from BaseGeometry for rectangles.
+
+Classes:
+- BaseGeometry: Provides methods for integer validation.
+- Rectangle: Represents a rectangle with width and height attributes.
 """
 
 class MetaClass(type):
