@@ -52,7 +52,7 @@ class BaseGeometry(metaclass=MetaClass):
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 """
-Geometry Module
+Rectangle  Module
 
 This module is used to calculate Geometry.
 
