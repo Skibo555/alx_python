@@ -54,13 +54,7 @@ class Rectangle(BaseGeometry):
      """
     def __init__(self, width, height):
         """
-        A subclass that represent a Rectangle inheriting from BaseGeometry.
-        Attribute:
-             width (int): An integer value.
-             height (int): An integer value.
-
-        Methods:
-             It takes no method for now.
+        documentation for class goes here
         """
         super().__init__("Rectangle")
         self.__width = width
