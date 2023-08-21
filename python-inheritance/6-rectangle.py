@@ -22,7 +22,6 @@ class BaseGeometry(metaclass=MetaClass):
     """
     documentation for class goes here
     """
-
     def __dir__(cls):
         return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
 
@@ -51,16 +50,7 @@ class BaseGeometry(metaclass=MetaClass):
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
-"""
-Rectangle  Module
 
-This module is used to calculate Geometry.
-
-Example:
-    >>> import module_name
-    >>> instance = Rectangle.BaseGeomerty()
-    >>> instance.method()
-"""
 class Rectangle(BaseGeometry):
     
      """
