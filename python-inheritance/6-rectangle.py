@@ -67,6 +67,5 @@ class Rectangle(BaseGeometry):
      Documentation
      """
     def __init__(self, width, height):
-        super().__init__("Rectangle")
         self.__width = width
         self.__height = height
