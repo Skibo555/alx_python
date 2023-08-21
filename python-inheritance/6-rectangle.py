@@ -44,16 +44,14 @@ class BaseGeometry(metaclass=MetaClass):
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
-
+"""
+Documentation
+"""
 class Rectangle(BaseGeometry):
     
      """
-     class Rectangle that inherits from BaseGeometry (7-base_geometry.py).
-     Private instance attributes:
-        width
-        height
-        Inherits from BaseGeometry.
-    """
+     Documentation
+     """
     def __init__(self, width, height):
         """
         A subclass that represent a Rectangle inheriting from BaseGeometry.
