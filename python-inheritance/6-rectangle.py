@@ -44,7 +44,9 @@ class BaseGeometry(metaclass=MetaClass):
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
-
+"""
+Documented my class now?
+"""
 
 class Rectangle(BaseGeometry):
      """
