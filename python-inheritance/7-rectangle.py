@@ -17,12 +17,7 @@ class BaseGeometry(metaclass=MetaClass):
     
     def __dir__(cls):
         return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
-    
-    def area(self):
-        """
-        A public method that raise an exception
-        """
-        raise Exception ("area() is not implemented")
+
     def integer_validator(self, name, value):
         """
         A public method that validates value:
@@ -51,21 +46,10 @@ class Rectangle(BaseGeometry):
         self.__height = height
         self.integer_validator("width", width)
         self.integer_validator("height", height)
-
-def area(self):
+    def area(self):
         """
-        Calculate the area of the rectangle.
-
-        Returns:
-            int: The area of the rectangle.
+        A public method that return area of rectangle
         """
-        return self.__width * self.__height
-
+        return self.__height * self.__width
     def __str__(self):
-        """
-        Return a formatted rectangle description.
-
-        Returns:
-            str: The formatted rectangle description.
-        """
-        return f"[Rectangle] {self.__width}/{self.__height}"
+        return ("[Rectangle] {}/{}".format(self.__width,self.__height))
