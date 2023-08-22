@@ -25,4 +25,4 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = id
-            self.id = Base()
+instance = Base()
