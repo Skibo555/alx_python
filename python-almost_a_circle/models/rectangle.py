@@ -10,7 +10,7 @@ Classes:
 
 from models.base import Base
 
-class Rectangle(Base)
+class Rectangle(Base):
     """
     Represents a rectangle with width, height, x, and y attributes.
 
