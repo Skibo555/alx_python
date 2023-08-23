@@ -37,10 +37,10 @@ class Rectangle(Base)
             id (int, optional): The unique identifier of the rectangle. Defaults to None.
         """
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self_x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
         self.validate_width()
         self.validate_height()
         self.validate_x()
