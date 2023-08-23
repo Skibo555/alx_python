@@ -4,6 +4,7 @@ Module: models.rectangle
 This module defines the Rectangle class, which inherits from the Base class.
 
 Classes:
+- Base - Represents bass class for rest of classes.
 - Rectangle: Represents a rectangle with width, height, x, and y attributes.
 """
 
@@ -11,7 +12,7 @@ from models.base import Base
 
 class Rectangle(Base)
 
-     """
+    """
     Represents a rectangle with width, height, x, and y attributes.
 
     Attributes:
@@ -26,7 +27,7 @@ class Rectangle(Base)
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        Initializes a Rectangle instance.
+        Initializes a Rectangle instance with width, height, x and y.
 
         Args:
             width (int): The width of the rectangle.
@@ -40,3 +41,7 @@ class Rectangle(Base)
         self.height = height
         self_x = x
         self.y = y
+        self.validate_width()
+        self.validate_height()
+        self.validate_x()
+        self.validate_y()
