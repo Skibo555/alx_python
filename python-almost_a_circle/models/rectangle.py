@@ -24,6 +24,9 @@ class Rectangle(Base):
         __init__(self, width, height, x=0, y=0, id=None): Constructor to initialize the object's attributes.
     """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """
+        Instantiating the attributes
+        """
         super().__init__("Base")
         self.__width = width
         self.__height = height
