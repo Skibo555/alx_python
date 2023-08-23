@@ -20,10 +20,8 @@ class Rectangle(Base)
         x (int): The x-coordinate of the rectangle's position.
         y (int): The y-coordinate of the rectangle's position.
         id (int): The unique identifier of the rectangle.
-
-    Methods:
-        __init__(self, width, height, x=0, y=0, id=None): Initializes a Rectangle instance.
     """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Initializes a Rectangle instance with width, height, x and y.
