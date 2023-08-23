@@ -7,7 +7,7 @@ Classes:
 - Base: Represents the base class with an ID attribute.
 """
 
-from base import Base
+Base = __import__('base').Base
 
 class Rectangle(Base):
     """
