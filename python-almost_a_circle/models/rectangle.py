@@ -1,89 +1,96 @@
 """
-Module: models.base
+Module: models.rectangle
 
-This module defines the Base class.
+This module defines the Rectangle class, which inherits from the Base class.
 
 Classes:
-- Base: Represents the base class with an ID attribute.
+- Rectangle: Represents a rectangle with width, height, x, and y attributes.
 """
 
-Base = __import__('base').Base
+from models.base import Base
 
-class Rectangle(Base):
-    """
-    Base class with an ID attribute.
+class Rectangle(Base)
+
+     """
+    Represents a rectangle with width, height, x, and y attributes.
 
     Attributes:
-        __width (int): Private class attribute that represents the width of the rectangle.
-        __height (int): Private class.
-        __x (int):
-        __y (int):
-        id (int): Public instance attribute representing the object's ID.
+        width (int): The width of the rectangle.
+        height (int): The height of the rectangle.
+        x (int): The x-coordinate of the rectangle's position.
+        y (int): The y-coordinate of the rectangle's position.
+        id (int): The unique identifier of the rectangle.
 
     Methods:
-        __init__(self, width, height, x=0, y=0, id=None): Constructor to initialize the object's attributes.
+        __init__(self, width, height, x=0, y=0, id=None): Initializes a Rectangle instance.
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        Instantiating the attributes
+        Initializes a Rectangle instance.
+
+        Args:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+            x (int, optional): The x-coordinate of the rectangle's position. Defaults to 0.
+            y (int, optional): The y-coordinate of the rectangle's position. Defaults to 0.
+            id (int, optional): The unique identifier of the rectangle. Defaults to None.
         """
-        super().__init__("Base")
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self_x = x
+        self.y = y
 
-        @property
-        def get_width(self):
-            """
-            A getter for width
-            """
-            pass
-        @width.setter
-        def set_width(self):
-            """
-            A setter for the width attribute
-            """
-            pass
+    @property
+    def get_width(self):
+        """
+        A getter for width
+        """
+        return self.__width
 
-
-        @property
-        def get_height(self):
-            """
-            A getter for height
-            """
-            pass
-        @height.setter
-        def set_height(self):
-            """
-            A setter for the height attribute
-            """
-            pass
+    @width.setter
+    def set_width(self):
+        """
+        A setter for the width attribute
+        """
+        pass
 
 
-        @property
-        def get_x(self):
-            """
-            A getter for x
-            """
-            pass
-        @x.setter
-        def set_x(self):
-            """
-            A setter for the x attribute
-            """
-            pass
+    @property
+    def get_height(self):
+        """
+        A getter for height
+        """
+        pass
+    @height.setter
+    def set_height(self):
+        """
+        A setter for the height attribute
+        """
+        pass
 
+    @property
+    def get_x(self):
+        """
+        A getter for x
+        """
+        pass
+    @x.setter
+    def set_x(self):
+        """
+        A setter for the x attribute
+        """
+        pass
 
-        @property
-        def get_y(self):
-            """
-            A getter for y
-            """
-            pass
-        @y.setter
-        def set_y(self):
-            """
-            A setter for the y attribute
-            """
-            pass
+    @property
+    def get_y(self):
+        """
+        A getter for y
+        """
+        pass
+    @y.setter
+    def set_y(self):
+        """
+        A setter for the y attribute
+        """
+        pass
