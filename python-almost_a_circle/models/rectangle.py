@@ -39,49 +39,52 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-     def get_width(self):
+    @property
+    def get_width(self):
         """
         A getter for width
         """
         pass
-    
+    @width.setter
     def set_width(self):
         """
         A setter for the width attribute
         """
         pass
 
-
+    @property
     def get_height(self):
         """
         A getter for height
         """
         pass
-
+    @height.setter
     def set_height(self):
         """
         A setter for the height attribute
         """
         pass
-
+    
+    @property
     def get_x(self):
         """
         A getter for x
         """
         pass
 
+    @x.setter
     def set_x(self):
         """
         A setter for the x attribute
         """
         pass
-
+    @property
     def get_y(self):
         """
         A getter for y
         """
         pass
-
+    @y.setter
     def set_y(self):
         """
         A setter for the y attribute
