@@ -11,7 +11,6 @@ Classes:
 from models.base import Base
 
 class Rectangle(Base)
-
     """
     Represents a rectangle with width, height, x, and y attributes.
 
@@ -41,7 +40,3 @@ class Rectangle(Base)
         self.__height = height
         self.__x = x
         self.__y = y
-        self.validate_width()
-        self.validate_height()
-        self.validate_x()
-        self.validate_y()
