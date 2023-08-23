@@ -1,5 +1,5 @@
 """
-Module: models.rectangle
+Module: Rectangle
 
 This module defines the Rectangle class, which inherits from the Base class.
 
