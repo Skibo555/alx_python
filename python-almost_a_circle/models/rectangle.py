@@ -235,7 +235,7 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         The module is to update what we've got in the kwargs
         """
