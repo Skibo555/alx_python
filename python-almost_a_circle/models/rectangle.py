@@ -239,6 +239,19 @@ class Rectangle(Base):
         """
         The module is to update what we've got in the kwargs
         """
+        for key, value in kwargs.items():
+            if args is True:
+                break
+            if key == 'width':
+                self.__width = value
+            elif key == 'height':
+                self.__height = value
+            elif key == 'x':
+                self.__x = value
+            elif key == 'y':
+                self.__y = value
+            elif key == 'id':
+                self.id = value
 
         if len(args) == 1:
             self.id = args[0]
