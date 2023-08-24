@@ -90,7 +90,7 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, value):
+    def width(self, width):
         """
         Set the value of the width attribute.
 
@@ -100,7 +100,7 @@ class Rectangle(Base):
         Returns:
             value
         """
-        if not isinstance(value, int):
+        if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -116,7 +116,7 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self, value):
+    def height(self, height):
         """
         Set the value of the height attribute.
 
@@ -126,7 +126,7 @@ class Rectangle(Base):
         Returns:
             None
         """
-        if not isinstance(value, int):
+        if not isinstance(height, int):
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
@@ -143,7 +143,7 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self, value):
+    def x(self, y):
         """
         Set the value of the x attribute.
 
@@ -153,8 +153,8 @@ class Rectangle(Base):
         Returns:
             None
         """
-        if not isinstance(value, int):
-            raise TypeError("y must be an integer")
+        if not isinstance(x, int):
+            raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be > 0")
         self.__x = value
@@ -170,7 +170,7 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self, value):
+    def y(self, y):
         """
         Set the value of the y attribute.
 
@@ -180,7 +180,7 @@ class Rectangle(Base):
         Returns:
             None
         """
-        if not isinstance(value, int):
+        if not isinstance(y, int):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be > 0")
