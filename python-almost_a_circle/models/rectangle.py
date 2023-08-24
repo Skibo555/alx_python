@@ -47,7 +47,7 @@ class Rectangle(Base):
         Returns:
             None
         """
-        pass
+        return self.__width
 
     @get_width.setter
     def set_width(self, width):
@@ -60,7 +60,7 @@ class Rectangle(Base):
         Returns:
             None
         """
-        pass
+        self.__width = width
 
     @property
     def get_height(self):
@@ -70,7 +70,7 @@ class Rectangle(Base):
         Returns:
             None
         """
-        pass
+        return self.__height
 
     @get_height.setter
     def set_height(self, height):
@@ -83,7 +83,7 @@ class Rectangle(Base):
         Returns:
             None
         """
-        pass
+        self.__height = height
 
     @property
     def get_x(self):
@@ -93,7 +93,7 @@ class Rectangle(Base):
         Returns:
             None
         """
-        pass
+        return self.__x
 
     @get_x.setter
     def set_x(self, x):
@@ -106,7 +106,7 @@ class Rectangle(Base):
         Returns:
             None
         """
-        pass
+        self.__x = x
 
     @property
     def get_y(self):
@@ -116,7 +116,7 @@ class Rectangle(Base):
         Returns:
             None
         """
-        pass
+        return self.__y
 
     @get_y.setter
     def set_y(self, y):
@@ -129,4 +129,4 @@ class Rectangle(Base):
         Returns:
             None
         """
-        pass
+        self.__y = y
