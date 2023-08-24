@@ -185,3 +185,18 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0".format(y))
         self.__y = y
+
+
+    def area(self):
+        """
+        This module calculates the area of a rectangle.
+
+        Arg:
+            self.__height: It represents height attribute of a rectangle.
+            self.__width: It represents the breath/width of a rectangle.
+
+        Returns:
+            The multiplication of these two attributes.
+        """
+
+        return self.__height * self.__width
