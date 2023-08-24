@@ -240,7 +240,7 @@ class Rectangle(Base):
         The module is to update what we've got in the kwargs
         """
         for key_word_argument, value in kwargs.items():
-            if args is True:
+            if args:
                 break
             if key_word_argument == 'width':
                 self.__width = value
