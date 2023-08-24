@@ -212,11 +212,11 @@ class Rectangle(Base):
             Rectangle.
         """
 
-        for space in range(0, self.__y):
+        for a in range(0, self.__y):
                 print()
-        for i in range(0, self.__height):
-            for tab in range(0, self.__x):
+        for b in range(0, self.__height):
+            for c in range(0, self.__x):
                 print(" ", end="")
-            for j in range(0, self.__width):
+            for d in range(0, self.__width):
                 print("#", end="")
             print()
