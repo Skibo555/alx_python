@@ -100,7 +100,7 @@ class Rectangle(Base):
         Returns:
             value
         """
-        if value != int:
+        if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(value))
         if value <= 0:
             raise ValueError("{} must be > 0".format(value))
@@ -126,7 +126,7 @@ class Rectangle(Base):
         Returns:
             None
         """
-        if value != int:
+        if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(value))
         if value <= 0:
             raise ValueError("{} must be > 0".format(value))
