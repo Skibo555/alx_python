@@ -235,20 +235,29 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
 
-    def update(self, *args, **kwargs):
+    def update(self, *args):
         """
         The module is to update what we've got in the kwargs
         """
         for key_word_argument, value in kwargs.items():
-            if args is True:
-                break
-            if key_word_argument == 'width':
-                self.__width = value
-            elif key_word_argument == 'height':
-                self.__height = value
-            elif key_word_argument == 'x':
-                self.__x = value
-            elif key_word_argument == 'y':
-                self.__y = value
-            elif key_word_argument == 'id':
-                self.id = value
+        
+        if len(args) == 1:
+            self.id = args[0]
+        elif len(args) == 2:
+            self.id = args[0]
+            self.__width = args[1]
+        elif len(args) == 3:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+        elif len(args) == 4:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+        elif len(args) == 5:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
