@@ -12,7 +12,7 @@ from models.rectangle import rectangle
 
 class Square(Rectangle):
 
-"""
+    """
     This is a class that defines a square.
     Attributes:
         size (int): I don't like this.
