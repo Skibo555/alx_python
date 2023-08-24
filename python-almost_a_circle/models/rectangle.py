@@ -45,7 +45,7 @@ class Rectangle(Base):
         Get the value of the width attribute.
 
         Returns:
-            None
+            width
         """
         return self.__width
 
@@ -58,10 +58,13 @@ class Rectangle(Base):
             width: The new width value.
 
         Returns:
-            None
+            value
         """
+        if value != int:
+            raise TypeError("{} must be an integer".format(value))
+        if value <= 0:
+            raise ValueError("{} must be > 0".format(value))
         self.__width = value
-
     @property
     def height(self):
         """
@@ -83,6 +86,10 @@ class Rectangle(Base):
         Returns:
             None
         """
+        if value != int:
+            raise TypeError("{} must be an integer".format(value))
+        if value <= 0:
+            raise ValueError("{} must be > 0".format(value))
         self.__height = value
 
     @property
@@ -106,6 +113,8 @@ class Rectangle(Base):
         Returns:
             None
         """
+        if value < 0:
+            raise ValueError("{} must be > 0".format(value))
         self.__x = value
 
     @property
@@ -129,4 +138,6 @@ class Rectangle(Base):
         Returns:
             None
         """
+        if value < 0:
+            raise ValueError("{} must be > 0".format(value))
         self.__y = value
