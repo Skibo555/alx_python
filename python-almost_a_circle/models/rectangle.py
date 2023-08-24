@@ -40,7 +40,7 @@ class Rectangle(Base):
         self.__y = y
 
     @property
-    def get_width(self):
+    def width(self):
         """
         Get the value of the width attribute.
 
@@ -49,8 +49,8 @@ class Rectangle(Base):
         """
         return self.__width
 
-    @get_width.setter
-    def set_width(self, value):
+    @width.setter
+    def width(self, value):
         """
         Set the value of the width attribute.
 
@@ -63,7 +63,7 @@ class Rectangle(Base):
         self.__width = value
 
     @property
-    def get_height(self):
+    def height(self):
         """
         Get the value of the height attribute.
 
@@ -72,8 +72,8 @@ class Rectangle(Base):
         """
         return self.__height
 
-    @get_height.setter
-    def set_height(self, value):
+    @height.setter
+    def height(self, value):
         """
         Set the value of the height attribute.
 
@@ -86,7 +86,7 @@ class Rectangle(Base):
         self.__height = value
 
     @property
-    def get_x(self):
+    def x(self):
         """
         Get the value of the x attribute.
 
@@ -95,8 +95,8 @@ class Rectangle(Base):
         """
         return self.__x
 
-    @get_x.setter
-    def set_x(self, value):
+    @x.setter
+    def x(self, value):
         """
         Set the value of the x attribute.
 
@@ -109,7 +109,7 @@ class Rectangle(Base):
         self.__x = value
 
     @property
-    def get_y(self):
+    def y(self):
         """
         Get the value of the y attribute.
 
@@ -118,8 +118,8 @@ class Rectangle(Base):
         """
         return self.__y
 
-    @get_y.setter
-    def set_y(self, value):
+    @y.setter
+    def y(self, value):
         """
         Set the value of the y attribute.
 
