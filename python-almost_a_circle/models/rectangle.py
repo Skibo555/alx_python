@@ -233,3 +233,22 @@ class Rectangle(Base):
         [Rectangle] (<id>) <x>/<y> - <width>/<height>
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+
+    def we_are_here(self, *args, **kwargs):
+        """
+        The module is to update what we've got in the kwargs
+        """
+        for key_word_argument, value in kwargs.items():
+            if args is True:
+                break
+            if key_word_argument == 'width':
+                self.__width = value
+            elif key_word_argument == 'height':
+                self.__height = value
+            elif key_word_argument == 'x':
+                self.__x = value
+            elif key_word_argument == 'y':
+                self.__y = value
+            elif key_word_argument == 'id':
+                self.id = value
