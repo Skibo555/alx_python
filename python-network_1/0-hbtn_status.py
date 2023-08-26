@@ -13,6 +13,7 @@ Arg:
 
 Return:
     Response.
+    """
 work = urllib.request.Request('https://alu-intranet.hbtn.io/status')
 with urllib.request.urlopen(work) as response:
     site = response.read()
