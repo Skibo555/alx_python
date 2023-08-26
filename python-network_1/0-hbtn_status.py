@@ -5,7 +5,7 @@ Request Module.
 This module provides functionality to fetch a URL using the urllib.request module.
 """
 
-import urllib.request
+from requests import requests
 
 # Define the URL to be fetched
 url = 'https://alu-intranet.hbtn.io/status'
