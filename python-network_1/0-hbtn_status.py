@@ -6,9 +6,15 @@ This module provides functionality to fetch a URL using the urllib.request modul
 """
 
 from requests import requests
-"""
-This is to request a url using py
-"""
+    """
+    Fetches content from the specified URL.
+
+    Args:
+        url (str): The URL to fetch content from.
+
+    Returns:
+        bytes: The content fetched from the URL as bytes.
+    """
 url = 'https://alu-intranet.hbtn.io/status'
 
 request = urllib.request.Request(url)
