@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Request Module.
+request Module.
 
 This module provides functionality to fetch a URL using the urllib.request module.
 """
