@@ -1,18 +1,19 @@
+#!/usr/bin/python3
 """
 Request Module.
 
-This is the python defined module to fetch a URL.
+This module provides functionality to fetch a URL using the urllib.request module.
 """
-from requests import requests
-    """
-    This module fetches a url using.
 
-    Arg:
-        urllib.request.Request module.
+import urllib.request
 
-    Return:
-        Response.
-    """
-work = urllib.request.Request('https://alu-intranet.hbtn.io/status')
-with urllib.request.urlopen(work) as response:
-    site = response.read()
+# Define the URL to be fetched
+url = 'https://alu-intranet.hbtn.io/status'
+
+# Create a request object for the URL
+request = urllib.request.Request(url)
+
+# Open the URL and read the response
+with urllib.request.urlopen(request) as response:
+    site_content = response.read()
+
