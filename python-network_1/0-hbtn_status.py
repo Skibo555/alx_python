@@ -4,7 +4,7 @@ Request Module.
 
 This is the python defined module to fetch a URL.
 """
-import urllib.request
+from requests import requests
 """
 This module fetches a url using.
 
