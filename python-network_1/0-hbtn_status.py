@@ -6,8 +6,9 @@ This module provides functionality to fetch a URL using the urllib.request modul
 """
 
 from requests import requests
-
-# Define the URL to be fetched
+"""
+This is to request a url using py
+"""
 url = 'https://alu-intranet.hbtn.io/status'
 
 # Create a request object for the URL
