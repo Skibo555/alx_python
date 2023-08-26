@@ -5,13 +5,11 @@ request Module.
 This module provides functionality to fetch a URL using the urllib.request module.
 """
 
-from requests import requests
+import requests
 
+import requests
 
-url = 'https://alu-intranet.hbtn.io/status'
-
-request = urllib.request.Request(url)
-
-with urllib.request.urlopen(request) as response:
-    site_content = response.read()
-
+response = requests.get('https://alu-intranet.hbtn.io/status')
+print("Body response:")
+print("\t- type: {}\n"
+      "\t- content: {}".format(type(response.text), response.text))
