@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 """
 Request Module.
 
@@ -30,6 +29,11 @@ def get_the_url():
     try:
         response = requests.get(url)
         response.raise_for_status()
+        if response.raise_for_status == 200:
+            x_request_id = response.headers.get('X-Request-Id')
+            
+            if x_request_id is not None:
+                return ("X-Request-Id:", x_request_id)
 
     except requests.exceptions.RequestException as e:
         sys.exit(1)
