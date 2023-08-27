@@ -7,8 +7,6 @@ This module provides functionality to fetch a URL using the urllib.request modul
 
 import requests
 
-import requests
-
 response = requests.get('https://alu-intranet.hbtn.io/status')
 print("Body response:")
 print("\t- type: {}\n"
