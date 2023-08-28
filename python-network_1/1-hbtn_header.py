@@ -21,12 +21,12 @@ def get_an_input():
         url = sys.argv[-1]
         return url
     else:
-        exit(1)
+        sys.exit(1)
 
 def get_the_positional_arg():
     """
     This module is to the the last argument on the command line.
     """
-    method = resquests.get(url)
-    view = method.header('X-Request-Id')
+    method = requests.get(url)
+    view = method.headers.get('X-Request-Id')
     return view
