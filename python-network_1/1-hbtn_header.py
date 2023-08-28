@@ -17,26 +17,35 @@ def get_an_input():
         sys.agrv[1].
 
     """
-    if len(sys.argv) != 2:
-        url = sys.argv[1]
-        return url
-
-def get_the_url():
-    """
-    This module runs the positional arguement which is the url.
-    """
-
-    url = get_the_url()
-
     try:
         response = requests.get(url)
         response.raise_for_status()
-        if response.status_code == 200:
-            x_request_id = response.headers.get('X-Request-Id')
-            
-            if x_request_id is not None:
-                return ("X-Request-Id:", x_request_id)
 
+        x_requests_id = response.headers.get('X-Request-Id')
+
+        if x_requests_id is not None:
+            return x_requests_id
+        else:
+            return None
     except requests.exceptions.RequestException as e:
+        print("Error:", e)
+        return None
+def another():
+    """
+    This is a function that gets the argment from the command line.
+
+    Arg:
+        sys.argv[]
+
+    Return:
+        sys.argv[1]
+    """
+    if len(sys.argv) != 2:
         sys.exit(1)
-    return response.text
+
+    url = sys.argv[1]
+    x_request_id = get_an_input(url)
+
+
+    if x_request_id is not None:
+        return x_request_id
