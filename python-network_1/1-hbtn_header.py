@@ -48,4 +48,4 @@ def another():
 
 
     if x_request_id is not None:
-        return x_request_id
+        print(x_request_id)
