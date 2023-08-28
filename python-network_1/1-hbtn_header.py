@@ -17,7 +17,7 @@ def get_an_input():
         sys.agrv[1].
 
     """
-    if sys.argv != 2:
+    if len(sys.argv) != 2:
         url = sys.argv[1]
         return url
 
@@ -26,10 +26,12 @@ def get_the_url():
     This module runs the positional arguement which is the url.
     """
 
+    url = get_the_url()
+
     try:
         response = requests.get(url)
         response.raise_for_status()
-        if response.raise_for_status == 200:
+        if response.status_code == 200:
             x_request_id = response.headers.get('X-Request-Id')
             
             if x_request_id is not None:
@@ -37,4 +39,4 @@ def get_the_url():
 
     except requests.exceptions.RequestException as e:
         sys.exit(1)
-    return(response.text)
+    return response.text
