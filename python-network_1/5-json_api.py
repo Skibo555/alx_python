@@ -5,11 +5,14 @@ This module prints a module
 import sys
 import requests
 
+import sys
+import requests
+
 # Get the letter from the command-line argument, or set it to an empty string if not provided
 if len(sys.argv) > 1:
     letter = sys.argv[1]
 else:
-    letter = sys.argv[1]""
+    letter = ""
 
 # Define the URL
 url = "http://0.0.0.0:5000/search_user"
@@ -17,25 +20,16 @@ url = "http://0.0.0.0:5000/search_user"
 # Send a POST request with the letter as a parameter
 response = requests.post(url, data={'q': letter})
 
-# Check if the response body is properly JSON formatted
-if response.text.strip():
-    if response.text.strip()[0] == "{" and response.text.strip()[-1] == "}":
-        # Parse the JSON-like response manually
-        response_parts = response.text.strip()[1:-1].split(",")
-        id_ = ""
-        name = ""
-        for part in response_parts:
-            key, value = part.split(":")
-            if key.strip() == '"id"':
-                id_ = value.strip('" ')
-            elif key.strip() == '"name"':
-                name = value.strip('" ')
+try:
+    # Try to parse the response content as JSON
+    json_data = response.json()
 
-        if id_ and name:
-            print("[{}] {}".format(id_, name))
-        else:
-            print("No result")
+    # Check if the response is a non-empty dictionary
+    if isinstance(json_data, dict) and json_data:
+        id_ = json_data.get('id', '')
+        name = json_data.get('name', '')
+        print("[{}] {}".format(id_, name))
     else:
-        print("Not a valid JSON")
-else:
-    print("No result")
+        print("No result")
+except ValueError:
+    print("Not a valid JSON")
