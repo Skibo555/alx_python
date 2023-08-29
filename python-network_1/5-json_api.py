@@ -8,7 +8,7 @@ import requests
 # Get the letter from the command-line argument, or set it to an empty string if not provided
 if len(sys.argv) > 1:
     letter = sys.argv[1]
-else:
+if len(sys.argv) < 1:
     letter = ""
 
 # Define the URL
