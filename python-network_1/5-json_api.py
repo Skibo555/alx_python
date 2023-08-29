@@ -9,7 +9,7 @@ import requests
 if len(sys.argv) > 1:
     letter = sys.argv[1]
 else:
-    letter = ""
+    letter = sys.argv[1]""
 
 # Define the URL
 url = "http://0.0.0.0:5000/search_user"
