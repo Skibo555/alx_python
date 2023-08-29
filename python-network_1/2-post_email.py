@@ -7,8 +7,9 @@ import requests
 
 url = sys.argv[-2]
 email = sys.argv[-1]
+data = {"email": email}
 
-req = requests.post(url, data=email)
+req = requests.post(url, data=data)
 
-if requests.status_codes == 200:
+if req.status_code == 200:
     print(req.text)
