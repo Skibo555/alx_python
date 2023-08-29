@@ -15,4 +15,4 @@ response = requests.get(url)
 # Check if the request was successful
 
 if response.status_code == 200:
-    print(response.headers.get('X-Request-Id')
+    print(response.headers.get('X-Request-Id'))
