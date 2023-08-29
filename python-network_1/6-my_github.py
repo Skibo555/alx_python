@@ -8,7 +8,7 @@ import requests
 url = 'https://api.github.com/user'
 username = sys.argv[1]
 password = sys.argv[2]
-parameters = {"username":"Skibo555", "password":"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")
+parameters = {username, password)
 
 response = requests.get(url, auth=parameters)
 try:
