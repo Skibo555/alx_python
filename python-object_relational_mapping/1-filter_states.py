@@ -24,7 +24,7 @@ def list_states(username, password, database_name):
 
         # Retrieve all states from the 'states'.
         cursor.execute(
-            "SHOW * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+            "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
 
         # Fetch and print the results
         results = cursor.fetchall()
@@ -36,7 +36,9 @@ def list_states(username, password, database_name):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 4:
+    if len(sys.argv) != 4:
+        exit
+    else:
         username = sys.argv[1]
         password = sys.argv[2]
         database_name = sys.argv[3]
