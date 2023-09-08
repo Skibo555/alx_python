@@ -11,9 +11,9 @@ def sql():
     """
     args = sys.argv[1:]
     if len(args) <= 2:
-        arg1 = [0]
-        arg2 = [1]
-        arg3 = [-1]
+        arg1 = sys.argv[0]
+        arg2 = sys.argv[1]
+        arg3 = sys.argv[-1]
     db = MySQLdb.connect(
         host="localhost",
         user=arg1,
