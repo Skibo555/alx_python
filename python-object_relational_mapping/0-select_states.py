@@ -27,7 +27,7 @@ def sql():
             db=arg3
         )
         db_cursor = db.cursor()
-        db_cursor.execute("SELECT * FROM states")
+        db_cursor.execute("SELECT states")
         db_cursor.execute("ORDER BY states.id ASC")
         result = db_cursor.fetchall()
         for row in result:
