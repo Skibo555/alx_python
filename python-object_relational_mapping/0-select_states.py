@@ -11,20 +11,26 @@ def sql():
     """
     args = sys.argv[1:]
 
-    if len(args) <= 3:
+    if len(args) <= 4:
         return
-    arg1 = sys.argv[0]
-    arg2 = sys.argv[1]
-    arg3 = sys.argv[2]
+    arg1 = sys.argv[1]
+    arg2 = sys.argv[2]
+    arg3 = sys.argv[3]
     db = MySQLdb.connect(
         host="localhost",
         user=arg1,
         passwd=arg2,
         db=arg3
     )
-    db_cursor = db_connect.cursor()
-    db_cursor.execute("SELECT ALL FROM states")
-    db_cursor.execute("ORDER BY states.id [ASC|DESC]")
+    db_cursor = db.cursor()
+    db_cursor.execute("SELECT ALL FROM states ORDER BY id ASC")
+    result = db_cursor.fetchall()
+    for row in result:
+        print(row)
+
+    db.commit()
+    db_cursor.close()
+    db.close()
 
 
 if __name__ == '__main__':
