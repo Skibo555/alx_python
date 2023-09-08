@@ -23,7 +23,7 @@ def sql():
         db=arg3
     )
     db_cursor = db_connect.cursor()
-    db_cursor.execute("SELECT * FROM states")
+    db_cursor.execute("SELECT ALL FROM states")
     db_cursor.execute("ORDER BY states.id [ASC|DESC]")
 
 
