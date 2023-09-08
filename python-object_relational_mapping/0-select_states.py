@@ -11,7 +11,7 @@ def sql():
     """
     args = sys.argv[1:]
 
-    if len(args) <= 2:
+    if len(args) <= 3:
         return
     arg1 = sys.argv[0]
     arg2 = sys.argv[1]
