@@ -23,7 +23,8 @@ def sql():
         db=arg3
     )
     db_cursor = db.cursor()
-    db_cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    db_cursor.execute("SELECT * FROM states")
+    db_cursor.execute("ORDER BY id ASC")
     result = db_cursor.fetchall()
     for row in result:
         print(row)
