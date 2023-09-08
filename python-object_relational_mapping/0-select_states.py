@@ -5,40 +5,45 @@ import sys
 import MySQLdb
 
 
-def sql():
+def list_states(username, password, database_name):
     """
     Here's the logic to get arguments from the command line.
     """
-    args = sys.argv[1:]
-
-    if len(args) <= 4:
-        return
-    arg1 = sys.argv[1]
-    arg2 = sys.argv[2]
-    arg3 = sys.argv[3]
-
     try:
-
+        # Connect to the MySQL server on localhost at port 3306
         db = MySQLdb.connect(
             host="localhost",
             port=3306,
-            user=arg1,
-            passwd=arg2,
-            db=arg3
+            user=username,
+            passwd=password,
+            db=database_name
         )
-        db_cursor = db.cursor()
-        db_cursor.execute("SELECT states")
-        db_cursor.execute("ORDER BY states.id ASC")
-        result = db_cursor.fetchall()
-        for row in result:
+
+        # Create a cursor object to execute SQL queries
+        cursor = db.cursor()
+
+        # Retrieve all states from the 'states' table and order by 'id' in ascending order
+        cursor.execute("SELECT * FROM states ORDER BY id ASC")
+
+        # Fetch and print the results
+        results = cursor.fetchall()
+        for row in results:
             print(row)
+
+        # Don't forget to commit changes and close the cursor and connection
         db.commit()
-        db_cursor.close()
+        cursor.close()
         db.close()
 
-    except Exception as q:
-        return ("{}, shey you no see ni?".format(q))
+    except Exception as e:
+        print(f"Error: {e}")
 
 
-if __name__ == '__main__':
-    sql()
+if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        print("Usage: python script.py <username> <password> <database>")
+    else:
+        username = sys.argv[1]
+        password = sys.argv[2]
+        database_name = sys.argv[3]
+        list_states(username, password, database_name)
