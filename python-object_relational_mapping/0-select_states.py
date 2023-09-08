@@ -10,10 +10,12 @@ def sql():
     Here's the logic to get arguments from the command line.
     """
     args = sys.argv[1:]
+
     if len(args) <= 2:
-        arg1 = sys.argv[0]
-        arg2 = sys.argv[1]
-        arg3 = sys.argv[-1]
+        return
+    arg1 = sys.argv[0]
+    arg2 = sys.argv[1]
+    arg3 = sys.argv[2]
     db = MySQLdb.connect(
         host="localhost",
         user=arg1,
