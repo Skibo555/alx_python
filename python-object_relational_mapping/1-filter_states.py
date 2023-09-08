@@ -23,10 +23,8 @@ def list_states(username, password, database_name):
         cursor = db.cursor()
 
         # Retrieve all states from the 'states'.
-        cursor.execute(
-            "SELECT * FROM states"
-            "WHERE name LIKE 'N%' OR name LIKE 'n%'"
-            "ORDER BY id ASC")
+        cursor.execute("SELECT * FROM states")
+        cursor.execute("WHERE name LIKE 'N%' OR name LIKE 'n%'ORDER BY id ASC")
 
         # Fetch and print the results
         results = cursor.fetchall()
