@@ -18,6 +18,7 @@ def sql():
     arg3 = sys.argv[3]
     db = MySQLdb.connect(
         host="localhost",
+        port=3306,
         user=arg1,
         passwd=arg2,
         db=arg3
