@@ -24,7 +24,7 @@ def sql_query():
 
         sql = db.cursor()
         query = "SELECT * cities FROM state_id \
-            ORDER BY id ASC"
+            ORDER BY cities.id ASC"
 
         result = sql.execute(query)
 
