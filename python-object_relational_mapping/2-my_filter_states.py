@@ -20,7 +20,8 @@ connection = MySQLdb.connect(
     db=database_name
 )
 db_cur = connection.cursor()
-sql_query = ("SELECT * FROM states WHERE name='search'")
+sql_query = ("SELECT FORMAT(name, 'search') AS actual_search \
+    FROM states WHERE name='search'")
 result = sql_query.execute(sql_query)
 
 results = result.fetchall()
