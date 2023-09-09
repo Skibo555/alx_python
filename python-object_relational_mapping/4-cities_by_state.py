@@ -31,7 +31,7 @@ def sql_query():
         result = sql.fetchall()
 
         for row in result:
-            print(row[0])
+            print(row)
 
         db.close()
 
