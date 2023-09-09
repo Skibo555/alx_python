@@ -30,10 +30,10 @@ def injection_free():
                 WHERE state_id =\
                     (SELECT id FROM states \
                     WHERE name COLLATE utf8mb4_bin LIKE '{}%') \
-                   ORDER BY id ASC".format(state_name)
-    result=obj.fetchall()
+                   ORDER BY id ASC".format(state_name))
+    result = obj.fetchall()
 
-    cities=', '.join(row[0] for row in result)
+    cities = ', '.join(row[0] for row in result)
     print(cities)
     db.close()
 
