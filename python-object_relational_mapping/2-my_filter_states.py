@@ -13,7 +13,7 @@ def sql():
         username = sys.argv[1]
         password = sys.argv[2]
         database_name = sys.argv[3]
-        search = sys.argv[4]
+        search = sys.argv[4].format()
 
     connection = MySQLdb.connect(
         host="localhost",
