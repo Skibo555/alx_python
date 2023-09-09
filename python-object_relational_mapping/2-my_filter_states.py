@@ -25,7 +25,7 @@ def sql():
     db_cur = connection.cursor()
 
     sql_query = ("SELECT * FROM states WHERE name = format(%s) \
-            ORDER BY id ASC")
+            ORDER BY states.id ASC")
     result = db_cur.execute(sql_query)
 
     results = result.fetchall()
