@@ -29,7 +29,7 @@ def list_states(username, password, database_name):
         # Fetch and print the results
         results = cursor.fetchall()
         for row in results:
-            if row[2].isalpha() is True:
+            if isinstance(row[1], str) and row[1][0].isalpha():
                 print(row)
 
     except Exception as e:
