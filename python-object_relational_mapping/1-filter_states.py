@@ -24,7 +24,7 @@ def list_states(username, password, database_name):
 
         # Retrieve all states from the 'states'.
         cursor.execute(
-            "SELECT * FROM `states` WHERE `name` REGEXP BINARY '[N]' ORDER BY id ASC")
+            "SELECT * FROM states WHERE name COLLATE utf8mb4_bin LIKE 'N%' ORDER BY id ASC")
 
         # Fetch and print the results
         results = cursor.fetchall()
