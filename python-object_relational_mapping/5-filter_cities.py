@@ -25,12 +25,19 @@ def injection_free():
 
     obj = db.cursor()
 
-    query = "SELECT * cities FROM"
-    result = obj.execute(query, state_name,)
+    query = "SELECT name \
+            FROM cities \
+                WHERE state_id =\
+                    (SELECT id FROM states \
+                    WHERE name COLLATE utf8mb4_bin LIKE '{}%') \
+                   ORDER BY id ASC"
+    obj.execute(query, state_name,)
 
+    result = obj.fetchall()
+
+    cities = ', '.join(row[0] for row in result)
+    print(cities)
     db.close()
-    for row in result:
-        print(row)
 
 
 if __name__ == '__main__':
