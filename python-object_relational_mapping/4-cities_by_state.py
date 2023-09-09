@@ -1,0 +1,37 @@
+"""
+This a SQL query that lists all the cities in the a specified database.
+"""
+
+import sys
+import MySQLdb
+
+
+def sql_query():
+    if len(sys.argv) != 3:
+        exit
+    else:
+        username = sys.argv[1]
+        password = sys.argv[2]
+        database_name = sys.argv[3]
+
+        db = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=username,
+            passwd=password,
+            db=database_name
+        )
+
+        sql = db.cursor()
+        query = "SHOW * cities ORDER BY id ASC"
+
+        result = sql.execute(query)
+
+        for row in result:
+            print(row)
+
+        db.close()
+
+
+if __name__ == '__main__':
+    sql_query()
