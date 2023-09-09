@@ -7,7 +7,7 @@ import MySQLdb
 
 
 def sql_query():
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 4:
         exit
     else:
         username = sys.argv[1]
@@ -23,7 +23,7 @@ def sql_query():
         )
 
         sql = db.cursor()
-        query = "SELECT cities FROM states_id \
+        query = "SELECT cities \
             ORDER BY id ASC"
 
         sql.execute(query)
