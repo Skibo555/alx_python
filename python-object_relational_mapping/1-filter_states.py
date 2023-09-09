@@ -30,8 +30,7 @@ def list_states(username, password, database_name):
         # Fetch and print the results
         results = cursor.fetchall()
         for row in results:
-            if isinstance(row[1], str) and row[1][0].isalpha():
-                print(row)
+            print(row)
 
     except Exception as e:
         print(f"Error: {e}")
