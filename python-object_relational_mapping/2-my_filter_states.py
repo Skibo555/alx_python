@@ -20,10 +20,10 @@ connection = MySQLdb.connect(
     db=database_name
 )
 db_cur = connection.cursor()
-sql_query = "SELECT * FROM states"
-cursor.execute(sql_query, (search))
+sql_query = ("SELECT * FROM states WHERE name='search'")
+result = sql_query.execute(sql_query)
 
-result = cursor.fetchall()
-for row in result:
+results = result.fetchall()
+for row in results:
     print(row)
 connection.close()
