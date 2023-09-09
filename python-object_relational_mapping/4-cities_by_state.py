@@ -23,10 +23,11 @@ def sql_query():
         )
 
         sql = db.cursor()
-        query = "SELECT * cities FROM state_id \
+        query = "SELECT * cities SHOW  \
             ORDER BY cities.id ASC"
 
-        result = sql.execute(query)
+        sql.execute(query)
+        result = sql.fetchall()
 
         for row in result:
             print(row)
