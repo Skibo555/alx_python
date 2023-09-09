@@ -26,7 +26,7 @@ def sql():
 
     sql_query = ("SELECT * FROM states WHERE name COLLATE utf8mb4_bin LIKE '%s' \
             ORDER BY id ASC")
-    db_cur.execute(sql_query, (search,))
+    db_cur.execute(sql_query, ('%' + search + '%',))
 
     results = db_cur.fetchall()
     for row in results:
