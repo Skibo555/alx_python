@@ -24,7 +24,7 @@ def sql():
     )
     db_cur = connection.cursor()
 
-    sql_query = ("SELECT * FROM states WHERE name=%s \
+    sql_query = ("SELECT * FROM states WHERE name COLLATE utf8mb4_bin LIKE 'N%'=%s \
             ORDER BY id ASC")
     db_cur.execute(sql_query, (search,))
 
