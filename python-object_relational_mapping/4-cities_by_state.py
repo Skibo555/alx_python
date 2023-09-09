@@ -23,13 +23,13 @@ def sql_query():
         )
 
         sql = db.cursor()
-        query = "SELECT cities FROM states ORDER BY id ASC"
+        query = "SELECT name FROM cities ORDER BY id ASC"
 
         sql.execute(query)
         result = sql.fetchall()
 
         for row in result:
-            print(row)
+            print(row[0])
 
         db.close()
 
