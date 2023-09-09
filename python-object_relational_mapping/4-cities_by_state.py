@@ -23,7 +23,9 @@ def sql_query():
         )
 
         sql = db.cursor()
-        query = "SELECT name FROM cities ORDER BY id ASC"
+        query = "SELECT cities.id, cities.name, states.name \
+                   FROM cities, states \
+                   WHERE states.id = state_id ORDER BY cities.id"
 
         sql.execute(query)
         result = sql.fetchall()
