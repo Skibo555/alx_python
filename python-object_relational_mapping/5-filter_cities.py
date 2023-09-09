@@ -26,7 +26,7 @@ def injection_free():
     obj = db.cursor()
 
     query = "SELECT * cities"
-    result = obj.excute(query, "FORM", state_name)
+    result = obj.execute(query, "FORM", state_name)
 
     db.close()
     for row in result:
