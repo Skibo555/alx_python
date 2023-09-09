@@ -23,8 +23,7 @@ def sql_query():
         )
 
         sql = db.cursor()
-        query = "SELECT * FROM cities WHERE name='California' \
-            ORDER BY id ASC"
+        query = "SELECT ALL FROM cities ORDER BY id ASC"
 
         sql.execute(query)
         result = sql.fetchall()
