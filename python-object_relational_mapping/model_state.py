@@ -1,8 +1,4 @@
-"""
-This is a state model.
-"""
 from sqlalchemy import create_engine, Column, Integer, String
-
 
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -28,6 +24,5 @@ class State(Base):
     id = Column(Integer, primary_key=True, autoinrement=True, nullable=False)
     name = Column(String, Integer(128), nullable=False)
 
-
-def __init__(self, name):
-    self.name = name
+    def __init__(self, name):
+        self.name = name
