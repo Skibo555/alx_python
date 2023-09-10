@@ -10,10 +10,20 @@ Base = declarative_base()
 
 
 class State(Base):
-    """
-    This is a good practice just as ALX has thought us.
-    """
+    '''
+    A class that models the table 'states', inherited from Base
+
+    Attributes:
+
+        id(int): unique identity number of each state
+
+        name(string): name of each state
+    '''
     __tablename__ = 'states'
 
     id = Column(Integer, primary_key=True, autoinrement=True, nullable=False)
     name = Column(String, Integer(128), nullable=False)
+
+
+def __init__(self, name):
+    self.name = name
