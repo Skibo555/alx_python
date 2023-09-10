@@ -25,6 +25,6 @@ def func():
         session = Session(engine)
 
         for session in session.query(State).order_by(State.id).all():
-            print("{}: {}".format(states.id, states.name))
+            print("{}: {}".format(States.id, States.name))
 
         session.close()
