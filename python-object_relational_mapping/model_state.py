@@ -6,9 +6,7 @@ Base = declarative_base()
 
 # The class documentations
 
-"""
-The class documentation.
-"""
+# A class to create tables
 
 
 class State(Base):
