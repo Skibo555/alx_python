@@ -18,8 +18,10 @@ def func():
         mysql_password = sys.argv[2]
         mysql_database_name = sys.argv[3]
 
-        engine = create_engine('mysql+mysqldb://{}:{}'.format("mysql_username",
-                               "mysql_password", "mysql_database_name"), pool_pre_ping=True)
+        engine = create_engine('mysql+mysqldb://{}:{}'
+                               .format("mysql_username",
+                                       "mysql_password", "mysql_database_name"),
+                               pool_pre_ping=True)
         Base.metadata.create_all(engine)
 
         session = Session(engine)
