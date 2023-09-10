@@ -19,7 +19,7 @@ class State(Base):
 
         name(string): name of each state
     """
-    __tablename__ = 'states'
+    __tablename__ = "states"
     id = Column(Integer, primary_key=True, autoinrement=True, nullable=False)
     name = Column(String, Integer(128), nullable=False)
 
