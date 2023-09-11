@@ -7,17 +7,15 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
-    if len(sys.argv) != 4:
-        exit
-    else:
-        mysql_username = sys.argv[1]
-        mysql_password = sys.argv[2]
-        mysql_database_name = sys.argv[3]
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    mysql_database_name = sys.argv[3]
 
-        route = 'mysql+mysqldb://{}:{}@localhost:3306/{}' \
-            .format(mysql_username,
-                    mysql_password,
-                    mysql_database_name)
+    route = 'mysql+mysqldb://{}:{}@localhost:3306/{}' \
+        .format(mysql_username,
+                mysql_password,
+                mysql_database_name)
+
     engine = create_engine(route)
 
     Base.metadata.create_all(engine)
