@@ -6,13 +6,7 @@ from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-
-def func(self, id, name):
-    id = self.id
-    name = self.name
-    """
-    The function I was asked to create for the marks!
-    """
+if __name__ == '__main__':
     if len(sys.argv) != 3:
         exit
     else:
@@ -20,7 +14,7 @@ def func(self, id, name):
         mysql_password = sys.argv[2]
         mysql_database_name = sys.argv[3]
 
-    route = 'mysql+mysqldb://{}:{}@localhost:3306/{}' \
+        route = 'mysql+mysqldb://{}:{}@localhost:3306/{}' \
             .format(mysql_username,
                     mysql_password,
                     mysql_database_name)
@@ -32,10 +26,6 @@ def func(self, id, name):
     session = Session()
 
     for session in session.query(State).order_by(State.id).all():
-        print("{}: {}".format(self.id, self.name))
+        print("{}: {}".format(state.id, state.name))
 
     session.close()
-
-
-if __name__ == '__main__':
-    func()
