@@ -23,9 +23,9 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).order_by(State.id).all()
+    states = session.query(State).order_by(State.id).all()
 
-    for state in state:
+    for state in states:
         if 'a' in state.name:
             print("{}: {}".format(state.id, state.name))
         else:
