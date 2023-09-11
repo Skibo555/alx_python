@@ -11,7 +11,7 @@ if __name__ == '__main__':
     mysql_password = sys.argv[2]
     mysql_database_name = sys.argv[3]
 
-    route = 'mysql+mysqldb://{}:{}@localhost:3306/{}' \
+    route = 'mysql+mysqldb://{}: {}@localhost/{}' \
         .format(mysql_username,
                 mysql_password,
                 mysql_database_name)
@@ -23,7 +23,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for session in session.query(State).order_by(State.id).all():
+    for state in session.query(State).order_by(State.id).all():
         print("{}: {}".format(state.id, state.name))
 
     session.close()
