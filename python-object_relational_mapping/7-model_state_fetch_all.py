@@ -20,7 +20,7 @@ def func(self, id, name):
         mysql_password = sys.argv[2]
         mysql_database_name = sys.argv[3]
 
-    route = 'mysql+mysqldb://{}:{}@localhost?{}' \
+    route = 'mysql+mysqldb://{}:{}@localhost:3306/{}' \
             .format(mysql_username,
                     mysql_password,
                     mysql_database_name)
