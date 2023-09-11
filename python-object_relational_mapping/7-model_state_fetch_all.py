@@ -30,7 +30,7 @@ def func():
     session = Session()
 
     for session in session.query(State).order_by(State.id).all():
-        print("{}: {}".format(state.id, state.name))
+        print("{}: {}".format(states.id, states.name))
 
     session.close()
 
