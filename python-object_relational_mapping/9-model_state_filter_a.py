@@ -25,9 +25,10 @@ if __name__ == '__main__':
 
     state = session.query(State).order_by(State.id).all()
 
-    for state in state.name:
-        print("{}: {}".format(state.id, state.name))
-    else:
-        print("Nothing")
+    for state in state:
+        if 'a' in state.name:
+            print("{}: {}".format(state.id, state.name))
+        else:
+            print("Nothing")
 
     session.close()
