@@ -25,7 +25,7 @@ if __name__ == '__main__':
 
     state = session.query(State).order_by(State.id).all()
 
-    if 'a' in state:
+    for state in state.name:
         print("{}: {}".format(state.id, state.name))
     else:
         print("Nothing")
