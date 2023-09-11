@@ -7,7 +7,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
-def func():
+def func(self, id, name):
+    id = self.id
+    name = self.name
     """
     The function I was asked to create for the marks!
     """
@@ -30,7 +32,7 @@ def func():
     session = Session()
 
     for session in session.query(State).order_by(State.id).all():
-        print("{}: {}".format(states.id, states.name))
+        print("{}: {}".format(self.id, self.name))
 
     session.close()
 
