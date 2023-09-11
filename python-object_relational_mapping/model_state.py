@@ -22,6 +22,5 @@ class State(Base):
                 primary_key=True)
     name = Column(String(128), nullable=False)
 
-    def __init__(self, id, name):
+    def __init__(self, name):
         self.name = name
-        self.id = id
