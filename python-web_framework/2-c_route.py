@@ -31,7 +31,7 @@ def display3(text):
     This function returns the values of a dynamic route using flask!
     """
     text = text.replace('_', " ")
-    return "C {}".format(escape(good))
+    return "C {}".format(escape(text))
 
 
 if __name__ == '__main__':
