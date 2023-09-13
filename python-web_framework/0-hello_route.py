@@ -12,4 +12,4 @@ def display():
     print("Hello HBNB!")
 
 
-app.run(host="0.0.0.0", port=5000, strict_slashes=False)
+app.run(strict_slashes=False)
