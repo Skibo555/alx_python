@@ -26,7 +26,7 @@ def display2():
 
 
 @app.route('/c/<good>')
-def display3():
+def display3(good):
     """
     This function returns the values of a dynamic route using flask!
     """
