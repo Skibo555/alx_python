@@ -46,12 +46,16 @@ def display4(text):
 
 @app.route('/number/<int: n>')
 def display5(n):
-    """
-    This is a randome function
-    """
+    '''
+    Checks if n is integer
+
+    param:
+        n: value to be checked
+    return:
+        a text
+    '''
     return "{} is a number".format(n)
 
 
 if __name__ == '__main__':
-
     app.run(host='0.0.0.0', port=5000)
