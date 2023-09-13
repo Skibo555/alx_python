@@ -50,7 +50,7 @@ def display5(n):
     return "{} is a number".format(n)
 
 
-@app.route('number_template/<int:n>')
+@app.route('/number_template/<int:n>')
 def display6(n):
 
     return render_template('5-number.html', n=n)
