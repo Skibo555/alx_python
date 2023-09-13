@@ -3,6 +3,7 @@
 This is a script that directes a user to the home page of a site.
 """
 from flask import Flask
+from markupsafe import escapse
 
 app = Flask(__name__)
 
@@ -22,6 +23,15 @@ def display2():
     This function is to bring my visitors to HBNB page, thanks to ALX!
     """
     return "HBNB"
+
+
+@app.route('/c/<good>')
+def display3():
+    """
+    This function returns the values of a dynamic route using flask!
+    """
+    good = good.replace('_', " ")
+    return "C {}".format(escape(good))
 
 
 if __name__ == '__main__':
