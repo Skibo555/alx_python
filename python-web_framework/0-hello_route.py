@@ -9,7 +9,5 @@ app = Flask(__name__)
 
 @app.route("/")
 def display():
-    print("Hello HBNB!")
-
-
-app.run(strict_slashes=False)
+    return "Hello HBNB!"
+# app.run(strict_slashes=False)
