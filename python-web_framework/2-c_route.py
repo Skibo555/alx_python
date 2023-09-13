@@ -26,10 +26,12 @@ def display2():
 
 
 @app.route('/c/<text>')
-def display3(text):
-    """
-    This function returns the values of a dynamic route using flask!
-    """
+def c(text):
+    '''
+    A function that returns text
+
+    return: a text
+    '''
     text = text.replace('_', " ")
     return "C {}".format(escape(text))
 
