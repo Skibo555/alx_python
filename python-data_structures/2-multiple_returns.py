@@ -6,4 +6,4 @@ def multiple_returns(sentence):
     if i == "":
         return None
     else:
-        return i(j[0]), j
+        return i, j[0]
