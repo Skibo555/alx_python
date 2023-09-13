@@ -41,6 +41,7 @@ def display4(text):
     """
     if text is None:
         text = 'is cool'
+        return "Python {}".format(escape(text))
     else:
         text = text.replace('_', " ")
     return "Python {}".format(escape(text))
