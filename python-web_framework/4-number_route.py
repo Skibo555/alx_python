@@ -47,7 +47,7 @@ def display4(text):
 @app.route('/number/<int: n>')
 def display5(n):
     """
-    This is converter
+    This is a randome function
     """
     return "{} is a number".format(n)
 
