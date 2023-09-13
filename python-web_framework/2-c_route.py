@@ -17,7 +17,7 @@ def display():
     return "Hello HBNB!"
 
 
-@app.route("/hbnb")
+@app.route("/hbnb", strict_slashes=False)
 def display2():
     """
     This function is to bring my visitors to HBNB page, thanks to ALX!
@@ -25,7 +25,7 @@ def display2():
     return "HBNB"
 
 
-@app.route('/c/<text>')
+@app.route('/c/<text>', strict_slashes=False)
 def c(text):
     '''
     A function that returns text
