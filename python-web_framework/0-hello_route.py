@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """
 This is a script that directes a user to the home page of a site.
 """
@@ -13,4 +13,4 @@ def display():
 
 
 if __name__ == '__main__':
-    app.run(strict_slashes=False, host="0.0.0.0", port="5000")
+    app.run(host="0.0.0.0", port=5000, strict_slashes=False)
