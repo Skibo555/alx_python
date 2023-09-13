@@ -44,6 +44,14 @@ def display4(text):
     return "Python {}".format(escape(text))
 
 
+def display5():
+    n = int
+    if isinstance(n, int):
+        return "n is a number"
+    else:
+        return None
+
+
 if __name__ == '__main__':
 
     app.run(host='0.0.0.0', port=5000)
