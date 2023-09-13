@@ -35,15 +35,12 @@ def display3(good):
 
 
 @app.route('/python/<text>')
+@app.route('/python/', defaults={'text': 'is cool'})
 def display4(text):
     """
     This function displays a defualt.
     """
-    if text is None:
-        text = 'is cool'
-        return "Python {}".format(escape(text))
-    else:
-        text = text.replace('_', " ")
+    text = text.replace('_', " ")
     return "Python {}".format(escape(text))
 
 
