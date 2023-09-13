@@ -46,14 +46,7 @@ def display4(text):
 
 @app.route('/number/<int: n>')
 def display5(n):
-    '''
-    Checks if n is integer
 
-    param:
-        n: value to be checked
-    return:
-        a text
-    '''
     return "{} is a number".format(n)
 
 
