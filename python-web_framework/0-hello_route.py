@@ -7,6 +7,7 @@ from flask import Flask
 app = Flask(__name__)
 
 
+@app.route('/', strict_slashes=False)
 @app.route("/")
 def display():
     return "Hello HBNB!"
@@ -14,4 +15,4 @@ def display():
 
 if __name__ == '__main__':
 
-    app.run(strict_slashes=False, host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000)
