@@ -34,8 +34,8 @@ def display3(good):
     return "C {}".format(escape(good))
 
 
-@app.route('/python/<text>')
-def display4(text="is cool"):
+@app.route('/python/', defaults={'text': "is cool"})
+def display4(text):
     """
     This function displays a defualt.
     """
