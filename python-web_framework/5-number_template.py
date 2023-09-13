@@ -2,7 +2,7 @@
 """
 This is a script that directes a user to the home page of a site.
 """
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template
 from markupsafe import escape
 
 app = Flask(__name__)
