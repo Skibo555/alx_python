@@ -44,13 +44,13 @@ def display4(text):
     return "Python {}".format(escape(text))
 
 
-@app.route('/number/<n>')
-def display5(n):
-    n = int
-    if isinstance(n, int):
-        return "n is a number"
-    else:
-        return None
+@app.route('/number/')
+@app.route('/number/<int: n>')
+def display5(n='n is a number'):
+    """
+    Just some random functions.
+    """
+    return "{}".format(n)
 
 
 if __name__ == '__main__':
