@@ -25,12 +25,12 @@ def display2():
     return "HBNB"
 
 
-@app.route('/c/<good>')
-def display3(good):
+@app.route('/c/<text>')
+def display3(text):
     """
     This function returns the values of a dynamic route using flask!
     """
-    good = good.replace('_', " ")
+    text = text.replace('_', " ")
     return "C {}".format(escape(good))
 
 
