@@ -44,7 +44,7 @@ def display4(text):
     return "Python {}".format(escape(text))
 
 
-@app.route('/number/<int: n>')
+@app.route('/number/<int:n>')
 def display5(n):
 
     return "{} is a number".format(n)
