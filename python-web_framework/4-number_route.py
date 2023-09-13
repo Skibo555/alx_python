@@ -45,11 +45,11 @@ def display4(text):
 
 
 @app.route('/number/<int: n>')
-def display5(n='n is a number'):
+def display5(n):
     """
     This is converter
     """
-    return "{}".format(n)
+    return "{} is a number".format(n)
 
 
 if __name__ == '__main__':
