@@ -25,7 +25,7 @@ def display2():
     return "HBNB"
 
 
-@app.route('/c/<text>', strict_slashes=False)
+@app.route('/c/<text>')
 def c(text):
     '''
     A function that returns text
