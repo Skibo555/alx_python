@@ -33,7 +33,7 @@ def get_items(employee_id):
                             employee_username, task_status, task_title])
 
         # Print the todo progress
-        print("Employee {} is done with tasks({}/{}):".format(employee_name +
+        print("Employee {} is done with tasks({}/{}):".format(employee_name,
               len(todo_data), len(todo_data)))
         for task in csv_data:
             print("\t {}, {}, {}, {}".format(
