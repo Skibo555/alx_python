@@ -39,7 +39,7 @@ if __name__ == "__main__":
         print("Usage: {} <employee_id>".format(sys.argv[0]))
         sys.exit(1)
 
-    # Get the employee ID from the command-line argument
+    # Get the employee ID from the command-line argument.
     try:
         employee_id = int(sys.argv[1])
     except ValueError:
