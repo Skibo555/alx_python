@@ -49,7 +49,7 @@ def get_items(employee_id):
         print("Failed to retrieve employee information and TODO list.")
 
 
-if __name__ == "__main":
+if __name__ == "__main__":
     # Check if an employee ID was provided as a command-line argument
     if len(sys.argv) != 2:
         print("Usage: {} <employee_id>".format(sys.argv[0]))
