@@ -20,8 +20,9 @@ def get_items(employee_id):
         user_data = response.json()
         todo_data = todo_list.json()
 
+        # To get the status of each task
+        task_status = [task["completed"] for task in todo_data]
         employee_name = user_data.get("name", "Unknown Employee")
-        completed_tasks = sum(1 for task in todo_data if task["completed"])
         task_titles = [task["title"]
                        for task in todo_data if task["completed"]]
 
@@ -29,7 +30,7 @@ def get_items(employee_id):
         with open('USER_ID.csv', 'w', newline='') as csvfile:
             my_writer = csv.writer(csvfile, delimiter=',')
             my_writer.writerow([employee_id, employee_name,
-                               completed_tasks, ', '.join(task_titles)])
+                               ', '.join(map(str, task_status)), ', '.join(task_titles)])
 
 
 if __name__ == "__main__":
