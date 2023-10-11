@@ -20,24 +20,39 @@ def get_items(employee_id):
         user_data = response.json()
         todo_data = todo_list.json()
 
+        # Generate a dynamic filename
+        filename = f"employee_{employee_id}_todos.csv"
+
         # Prepare data for CSV
         employee_name = user_data.get("name", "Unknown Employee")
         csv_data = []
 
+        # Determine fieldnames from the first task
+        if todo_data:
+            first_task = todo_data[0]
+            fieldnames = first_task.keys()
+        else:
+            fieldnames = ["employee_id",
+                          "employee_name", "status", "task_title"]
+
         for task in todo_data:
-            # Convert task status to "Completed" or "Not Completed"
+            # Convert task status to "True" or "False"
             status = "True" if task["completed"] else "False"
             task_title = task["title"]
             csv_data.append([employee_id, employee_name, status, task_title])
 
-        # Print the todo progress
-        with open('USER_ID.csv', 'w', newline='') as csvfile:
-            my_writer = csv.writer(csvfile, delimiter='"')
-            my_writer.writerow(["USER_ID", "EMPLOYEE_NAME",
-                               "TASK_STATUS", "TASK_TITLE"])
-            my_writer.writerows(csv_data)
+        # Print the todo progress to the dynamically generated filename
+        with open(filename, 'wt') as csvfile:
+            my_writer = csv.DictWriter(
+                csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_ALL)
+            my_writer.writeheader()
+
+            for row in csv_data:
+                my_writer.writerow(
+                    {key: value for key, value in zip(fieldnames, row)})
     else:
-        print("Failed to retrieve employee information and TODO list.")
+        print(
+            f"Failed to retrieve employee {employee_id}'s information and TODO list.")
 
 
 if __name__ == "__main__":
