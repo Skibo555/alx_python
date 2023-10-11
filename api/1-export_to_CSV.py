@@ -32,7 +32,7 @@ def get_items(employee_id):
 
         # Print the todo progress
         with open('USER_ID.csv', 'w', newline='') as csvfile:
-            my_writer = csv.writer(csvfile, delimiter=',')
+            my_writer = csv.writer(csvfile, delimiter='"')
             my_writer.writerow(["USER_ID", "EMPLOYEE_NAME",
                                "TASK_STATUS", "TASK_TITLE"])
             my_writer.writerows(csv_data)
