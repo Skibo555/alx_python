@@ -26,7 +26,7 @@ def get_items(employee_id):
                        for task in todo_data if task["completed"]]
 
         # Print the TODO progress
-        print("Employee {} is done with tasks ({}/{}):".format(employee_name,
+        print("Employee {} is done with tasks({}/{}):".format(employee_name,
               completed_tasks, total_tasks))
         for title in task_titles:
             print("\t{}".format(title))
