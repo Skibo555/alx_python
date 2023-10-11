@@ -21,16 +21,15 @@ def get_items(employee_id):
         todo_data = todo_list.json()
 
         employee_name = user_data.get("name", "Unknown Employee")
-        # total_tasks = len(todo_data)
         completed_tasks = sum(1 for task in todo_data if task["completed"])
         task_titles = [task["title"]
                        for task in todo_data if task["completed"]]
 
         # Print the todo progress
         with open('USER_ID.csv', 'w', newline='') as csvfile:
-            my_writer = csv.writer(csvfile, delimiter='"')
-            my_writer.writerows('{},{},{},{}'.format(
-                employee_id, employee_name, completed_tasks, task_titles))
+            my_writer = csv.writer(csvfile, delimiter=',')
+            my_writer.writerow([employee_id, employee_name,
+                               completed_tasks, ', '.join(task_titles)])
 
 
 if __name__ == "__main__":
