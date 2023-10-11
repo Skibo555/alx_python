@@ -2,26 +2,24 @@ import csv
 import requests
 import sys
 
-# No execution of this file when imported
 if __name__ == "__main__":
-
-    # Pass employee id on command line
+    # Pass employee id on the command line
     id = sys.argv[1]
 
-# APIs
+    # APIs
     userTodoURL = "https://jsonplaceholder.typicode.com/users/{}/todos".format(
         id)
     userProfile = "https://jsonplaceholder.typicode.com/users/{}".format(id)
 
-# Make requests on APIs
+    # Make requests to APIs
     todoResponse = requests.get(userTodoURL)
     profileResponse = requests.get(userProfile)
 
-# Parse responses and store in variables
+    # Parse responses and store in variables
     todoJson_Data = todoResponse.json()
     profileJson_Data = profileResponse.json()
 
-# Get employee information
+    # Get employee information
     employeeName = profileJson_Data['username']
 
     dataList = []
