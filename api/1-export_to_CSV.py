@@ -20,26 +20,42 @@ def get_items(employee_id):
         user_data = response.json()
         todo_data = todo_list.json()
 
-        # To get the status of each task
-        task_status = [task["completed"] for task in todo_data]
         employee_name = user_data.get("name", "Unknown Employee")
-        task_titles = [task["title"]
-                       for task in todo_data if task["completed"]]
+        employee_username = user_data.get("username", "Unknown Username")
+
+        # Create a list to store the CSV rows
+        csv_data = []
+
+        for task in todo_data:
+            task_status = "Completed" if task["completed"] else "Not Completed"
+            task_title = task["title"]
+            csv_data.append([employee_id, employee_name,
+                            employee_username, task_status, task_title])
 
         # Print the todo progress
-        with open('USER_ID.csv', 'w', newline='') as csvfile:
-            my_writer = csv.writer(csvfile, delimiter=',')
-            my_writer.writerow([employee_id, employee_name,
-                               ', '.join(map(str, task_status)), ', '.join(task_titles)])
+        print("Employee {} is done with tasks({}/{}):".format(employee_name +
+              len(todo_data), len(todo_data)))
+        for task in csv_data:
+            print("\t {}, {}, {}, {}".format(
+                task[0], task[1], task[3], task[4]))
+
+        # Write the data to a CSV file
+        with open('{}_tasks.csv'.format(employee_id), 'w', newline='') as csvfile:
+            my_writer = csv.writer(csvfile)
+            my_writer.writerow(
+                ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"])
+            my_writer.writerows(csv_data)
+    else:
+        print("Failed to retrieve employee information and TODO list.")
 
 
-if __name__ == "__main__":
+if __name__ == "__main":
     # Check if an employee ID was provided as a command-line argument
     if len(sys.argv) != 2:
         print("Usage: {} <employee_id>".format(sys.argv[0]))
         sys.exit(1)
 
-    # Get the employee ID from the command-line argument.
+    # Get the employee ID from the command-line argument
     try:
         employee_id = int(sys.argv[1])
     except ValueError:
